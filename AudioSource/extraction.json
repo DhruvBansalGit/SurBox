@@ -1,0 +1,358 @@
+{
+  "source_sha256": "b2f3a5cbc57fb9937e494a30a30389c010d640313598e22a5ba764bcdb4b8214",
+  "note_count": 39,
+  "pitch_reference": "Lower reed fundamental; upper octave rank retained",
+  "notes": [
+    {
+      "midi": 36,
+      "start_seconds": 0.35000000000000003,
+      "end_seconds": 10.67,
+      "reference_hz": 65.40639132514966,
+      "measured_hz": 64.89238128694585,
+      "cents": -13.659012712628847,
+      "frames": 197547
+    },
+    {
+      "midi": 37,
+      "start_seconds": 11.19,
+      "end_seconds": 22.18,
+      "reference_hz": 69.29565774421802,
+      "measured_hz": 69.08445811737317,
+      "cents": -5.284520348441967,
+      "frames": 198506
+    },
+    {
+      "midi": 38,
+      "start_seconds": 22.87,
+      "end_seconds": 31.220000000000002,
+      "reference_hz": 73.41619197935188,
+      "measured_hz": 72.90703327861901,
+      "cents": -12.048346190350141,
+      "frames": 197732
+    },
+    {
+      "midi": 39,
+      "start_seconds": 31.75,
+      "end_seconds": 39.9,
+      "reference_hz": 77.78174593052023,
+      "measured_hz": 77.82139151805683,
+      "cents": 0.8821903420358364,
+      "frames": 199214
+    },
+    {
+      "midi": 40,
+      "start_seconds": 40.52,
+      "end_seconds": 50.17,
+      "reference_hz": 82.4068892282175,
+      "measured_hz": 83.15114760573954,
+      "cents": 15.565467541468129,
+      "frames": 200911
+    },
+    {
+      "midi": 41,
+      "start_seconds": 51.550000000000004,
+      "end_seconds": 61.690000000000005,
+      "reference_hz": 87.30705785825097,
+      "measured_hz": 87.37590445276292,
+      "cents": 1.3646388082258942,
+      "frames": 199270
+    },
+    {
+      "midi": 42,
+      "start_seconds": 62.45,
+      "end_seconds": 71.15,
+      "reference_hz": 92.4986056779086,
+      "measured_hz": 92.14630325906222,
+      "cents": -6.60639588403772,
+      "frames": 198354
+    },
+    {
+      "midi": 43,
+      "start_seconds": 71.60000000000001,
+      "end_seconds": 80.38,
+      "reference_hz": 97.99885899543733,
+      "measured_hz": 97.94195887180278,
+      "cents": -1.0054815048080825,
+      "frames": 198997
+    },
+    {
+      "midi": 44,
+      "start_seconds": 80.91,
+      "end_seconds": 88.39,
+      "reference_hz": 103.82617439498628,
+      "measured_hz": 103.57514944484915,
+      "cents": -4.190746182379127,
+      "frames": 198631
+    },
+    {
+      "midi": 45,
+      "start_seconds": 88.71000000000001,
+      "end_seconds": 99.14,
+      "reference_hz": 110.0,
+      "measured_hz": 109.6307330247249,
+      "cents": -5.821481851540743,
+      "frames": 198444
+    },
+    {
+      "midi": 46,
+      "start_seconds": 99.59,
+      "end_seconds": 108.25,
+      "reference_hz": 116.54094037952248,
+      "measured_hz": 116.57829980077054,
+      "cents": 0.5548911588912651,
+      "frames": 199212
+    },
+    {
+      "midi": 47,
+      "start_seconds": 108.58,
+      "end_seconds": 116.2,
+      "reference_hz": 123.47082531403103,
+      "measured_hz": 123.32963698779056,
+      "cents": -1.9807909766730487,
+      "frames": 198885
+    },
+    {
+      "midi": 48,
+      "start_seconds": 116.66,
+      "end_seconds": 128.57,
+      "reference_hz": 130.8127826502993,
+      "measured_hz": 130.88961244091954,
+      "cents": 1.0165008484488633,
+      "frames": 199229
+    },
+    {
+      "midi": 49,
+      "start_seconds": 128.87,
+      "end_seconds": 136.57,
+      "reference_hz": 138.59131548843604,
+      "measured_hz": 138.5530142293597,
+      "cents": -0.47851200365363167,
+      "frames": 199013
+    },
+    {
+      "midi": 50,
+      "start_seconds": 136.91,
+      "end_seconds": 143.98,
+      "reference_hz": 146.8323839587038,
+      "measured_hz": 147.27594904641273,
+      "cents": 5.221991211197219,
+      "frames": 199714
+    },
+    {
+      "midi": 51,
+      "start_seconds": 144.32,
+      "end_seconds": 152.97,
+      "reference_hz": 155.56349186104046,
+      "measured_hz": 155.5071886570842,
+      "cents": -0.6267001741384209,
+      "frames": 199013
+    },
+    {
+      "midi": 52,
+      "start_seconds": 153.34,
+      "end_seconds": 160.76,
+      "reference_hz": 164.81377845643496,
+      "measured_hz": 165.3825462962605,
+      "cents": 5.964156172339516,
+      "frames": 199800
+    },
+    {
+      "midi": 53,
+      "start_seconds": 161.15,
+      "end_seconds": 168.92000000000002,
+      "reference_hz": 174.61411571650194,
+      "measured_hz": 174.8804353904318,
+      "cents": 2.638449012863373,
+      "frames": 199416
+    },
+    {
+      "midi": 54,
+      "start_seconds": 169.21,
+      "end_seconds": 178.98,
+      "reference_hz": 184.9972113558172,
+      "measured_hz": 185.7470496771158,
+      "cents": 7.00292648941904,
+      "frames": 199920
+    },
+    {
+      "midi": 55,
+      "start_seconds": 179.26,
+      "end_seconds": 189.34,
+      "reference_hz": 195.99771799087463,
+      "measured_hz": 196.55018415035138,
+      "cents": 4.873030030305066,
+      "frames": 199674
+    },
+    {
+      "midi": 56,
+      "start_seconds": 189.57,
+      "end_seconds": 200.01,
+      "reference_hz": 207.65234878997256,
+      "measured_hz": 208.1681698453542,
+      "cents": 4.295158090278082,
+      "frames": 199607
+    },
+    {
+      "midi": 57,
+      "start_seconds": 200.26,
+      "end_seconds": 209.12,
+      "reference_hz": 220.0,
+      "measured_hz": 220.67065445094715,
+      "cents": 5.2695168389985625,
+      "frames": 199720
+    },
+    {
+      "midi": 58,
+      "start_seconds": 209.37,
+      "end_seconds": 219.16,
+      "reference_hz": 233.08188075904496,
+      "measured_hz": 233.76527995415432,
+      "cents": 5.068574472949609,
+      "frames": 199696
+    },
+    {
+      "midi": 59,
+      "start_seconds": 219.39000000000001,
+      "end_seconds": 228.17000000000002,
+      "reference_hz": 246.94165062806206,
+      "measured_hz": 247.9288325987549,
+      "cents": 6.90704079219147,
+      "frames": 199908
+    },
+    {
+      "midi": 60,
+      "start_seconds": 228.55,
+      "end_seconds": 239.33,
+      "reference_hz": 261.6255653005986,
+      "measured_hz": 262.51719273982036,
+      "cents": 5.890064289375457,
+      "frames": 199791
+    },
+    {
+      "midi": 61,
+      "start_seconds": 239.58,
+      "end_seconds": 249.01000000000002,
+      "reference_hz": 277.1826309768721,
+      "measured_hz": 278.26490970397833,
+      "cents": 6.746560266853284,
+      "frames": 199890
+    },
+    {
+      "midi": 62,
+      "start_seconds": 249.27,
+      "end_seconds": 259.4,
+      "reference_hz": 293.6647679174076,
+      "measured_hz": 294.5935971796326,
+      "cents": 5.467060993094033,
+      "frames": 199742
+    },
+    {
+      "midi": 63,
+      "start_seconds": 259.85,
+      "end_seconds": 270.0,
+      "reference_hz": 311.1269837220809,
+      "measured_hz": 312.33521512768107,
+      "cents": 6.710058672248291,
+      "frames": 199886
+    },
+    {
+      "midi": 64,
+      "start_seconds": 270.28000000000003,
+      "end_seconds": 279.85,
+      "reference_hz": 329.6275569128699,
+      "measured_hz": 330.011567179335,
+      "cents": 2.0156831191969684,
+      "frames": 199344
+    },
+    {
+      "midi": 65,
+      "start_seconds": 280.06,
+      "end_seconds": 291.26,
+      "reference_hz": 349.2282314330039,
+      "measured_hz": 350.4507811372948,
+      "cents": 6.049979463947912,
+      "frames": 199810
+    },
+    {
+      "midi": 66,
+      "start_seconds": 291.53000000000003,
+      "end_seconds": 301.44,
+      "reference_hz": 369.9944227116344,
+      "measured_hz": 371.37704459866467,
+      "cents": 6.457342825901026,
+      "frames": 199857
+    },
+    {
+      "midi": 67,
+      "start_seconds": 301.69,
+      "end_seconds": 311.23,
+      "reference_hz": 391.99543598174927,
+      "measured_hz": 393.7816048548788,
+      "cents": 7.870633871655951,
+      "frames": 200020
+    },
+    {
+      "midi": 68,
+      "start_seconds": 311.48,
+      "end_seconds": 318.46,
+      "reference_hz": 415.3046975799451,
+      "measured_hz": 416.6697977274313,
+      "cents": 5.68120775309366,
+      "frames": 199767
+    },
+    {
+      "midi": 69,
+      "start_seconds": 318.78000000000003,
+      "end_seconds": 328.63,
+      "reference_hz": 440.0,
+      "measured_hz": 442.68557583471005,
+      "cents": 10.534611190882718,
+      "frames": 200328
+    },
+    {
+      "midi": 70,
+      "start_seconds": 328.87,
+      "end_seconds": 337.03000000000003,
+      "reference_hz": 466.1637615180899,
+      "measured_hz": 468.41159509086714,
+      "cents": 8.327918116884016,
+      "frames": 200073
+    },
+    {
+      "midi": 71,
+      "start_seconds": 337.85,
+      "end_seconds": 346.53000000000003,
+      "reference_hz": 493.8833012561241,
+      "measured_hz": 495.39158664132157,
+      "cents": 5.279012071909577,
+      "frames": 199721
+    },
+    {
+      "midi": 72,
+      "start_seconds": 346.74,
+      "end_seconds": 354.89,
+      "reference_hz": 523.2511306011972,
+      "measured_hz": 524.6141845833806,
+      "cents": 4.50395057729489,
+      "frames": 199631
+    },
+    {
+      "midi": 73,
+      "start_seconds": 355.06,
+      "end_seconds": 363.63,
+      "reference_hz": 554.3652619537442,
+      "measured_hz": 556.4549480454375,
+      "cents": 6.513637308553876,
+      "frames": 199863
+    },
+    {
+      "midi": 74,
+      "start_seconds": 363.89,
+      "end_seconds": 373.49,
+      "reference_hz": 587.3295358348151,
+      "measured_hz": 590.0288328366571,
+      "cents": 7.938318850646384,
+      "frames": 200028
+    }
+  ]
+}

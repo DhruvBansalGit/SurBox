@@ -1,0 +1,1236 @@
+// !$*UTF8*$!
+{
+	"archiveVersion" = 1;
+	"classes" = {
+	};
+	"objectVersion" = 56;
+	"objects" = {
+		"F00100000000000000000001" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Sources/SurBoxCore/LidMotion.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"F00100000000000000000002" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "F00100000000000000000001";
+		};
+		"F00100000000000000000003" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Sources/SurBox/LidAngleSensor.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"F00100000000000000000004" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "F00100000000000000000003";
+		};
+		"8FE390184D67C1383238A440" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Sources/SurBoxCore/InstrumentCore.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"92E04A5B8E8BDD45EEB09443" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "8FE390184D67C1383238A440";
+		};
+		"C7C7C62297BABE61AD17D623" = {
+			"isa" = "PBXGroup";
+			"name" = "SurBoxCore";
+			"children" = (
+				"F00100000000000000000001",
+				"8FE390184D67C1383238A440",
+			);
+			"sourceTree" = "<group>";
+		};
+		"DC75AF313AB325CEE03F64CE" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"F00100000000000000000002",
+				"92E04A5B8E8BDD45EEB09443",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"EEC6BDBE02D6FCD9BA79FAA2" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"60D9A6515071F8DA425D965C" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"DD8E10B457C9B3560AA56622" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "archive.ar";
+			"path" = "libSurBoxCore.a";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+			"includeInIndex" = 0;
+		};
+		"BC56E210FC4FA5965B22D6CA" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"PRODUCT_NAME" = "SurBoxCore";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.surbox.SurBoxCore";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"DEFINES_MODULE" = "YES";
+				"SKIP_INSTALL" = "YES";
+				"SWIFT_INSTALL_OBJC_HEADER" = "NO";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"ENABLE_TESTABILITY" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+		};
+		"7D040ECFF17CC4E184B7BE06" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"PRODUCT_NAME" = "SurBoxCore";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.surbox.SurBoxCore";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"DEFINES_MODULE" = "YES";
+				"SKIP_INSTALL" = "YES";
+				"SWIFT_INSTALL_OBJC_HEADER" = "NO";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+		};
+		"FC40AF357826F9CEC5928610" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"BC56E210FC4FA5965B22D6CA",
+				"7D040ECFF17CC4E184B7BE06",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"EB27BBAE0F7B92B6ECEA9521" = {
+			"isa" = "PBXNativeTarget";
+			"name" = "SurBoxCore";
+			"productName" = "SurBoxCore";
+			"productType" = "com.apple.product-type.library.static";
+			"productReference" = "DD8E10B457C9B3560AA56622";
+			"buildConfigurationList" = "FC40AF357826F9CEC5928610";
+			"buildPhases" = (
+				"DC75AF313AB325CEE03F64CE",
+				"EEC6BDBE02D6FCD9BA79FAA2",
+				"60D9A6515071F8DA425D965C",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+			);
+		};
+		"C015E8917EF08A46F78CFBF5" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.cpp.cpp";
+			"path" = "Sources/SurBoxDSP/SurBoxDSP.cpp";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"92165F6AA6BE3D51C0005786" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "C015E8917EF08A46F78CFBF5";
+		};
+		"E48BCDBA0EB5BB397B7E4051" = {
+			"isa" = "PBXGroup";
+			"name" = "SurBoxDSP";
+			"children" = (
+				"C015E8917EF08A46F78CFBF5",
+			);
+			"sourceTree" = "<group>";
+		};
+		"1F16F5ED763A1AD5BF3CCDAA" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"92165F6AA6BE3D51C0005786",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"08D4559E317D5380E19F335B" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"6ED0ACB39A3B11D26F6651B5" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"D0983580373FA115FEA7CAE0" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "archive.ar";
+			"path" = "libSurBoxDSP.a";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+			"includeInIndex" = 0;
+		};
+		"5AF204474A69404AA7316F22" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"PRODUCT_NAME" = "SurBoxDSP";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.surbox.SurBoxDSP";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"DEFINES_MODULE" = "YES";
+				"SKIP_INSTALL" = "YES";
+				"MODULEMAP_FILE" = "Sources/SurBoxDSP/include/module.modulemap";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"ENABLE_TESTABILITY" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+		};
+		"EDAEEF15455EA2D6FE96424A" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"PRODUCT_NAME" = "SurBoxDSP";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.surbox.SurBoxDSP";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"DEFINES_MODULE" = "YES";
+				"SKIP_INSTALL" = "YES";
+				"MODULEMAP_FILE" = "Sources/SurBoxDSP/include/module.modulemap";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+		};
+		"790AFA8EA42D36CD5CD38005" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"5AF204474A69404AA7316F22",
+				"EDAEEF15455EA2D6FE96424A",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"D59671139044DA0AC1B8550C" = {
+			"isa" = "PBXNativeTarget";
+			"name" = "SurBoxDSP";
+			"productName" = "SurBoxDSP";
+			"productType" = "com.apple.product-type.library.static";
+			"productReference" = "D0983580373FA115FEA7CAE0";
+			"buildConfigurationList" = "790AFA8EA42D36CD5CD38005";
+			"buildPhases" = (
+				"1F16F5ED763A1AD5BF3CCDAA",
+				"08D4559E317D5380E19F335B",
+				"6ED0ACB39A3B11D26F6651B5",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+			);
+		};
+		"4B80BF79524D1DE8D027C020" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Sources/SurBox/HarmoniumAudioEngine.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"0C4E9225839E083168174D44" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "4B80BF79524D1DE8D027C020";
+		};
+		"96E8A1F67F488035D5749B87" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Sources/SurBox/HarmoniumScene.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"AF170B4152B250755ABB3D69" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "96E8A1F67F488035D5749B87";
+		};
+		"664098DB77D55331D7430E52" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Sources/SurBox/InstrumentAccessibilityElement.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"45137E11BF8B8DCCC450A807" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "664098DB77D55331D7430E52";
+		};
+		"143D5FFBC6913AF1D2631344" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Sources/SurBox/InstrumentModel.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"8D1E3D9EFDF6B80FE334E201" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "143D5FFBC6913AF1D2631344";
+		};
+		"4AEED0404FFB39FC70ED9B89" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Sources/SurBox/NativeChecks.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"1B0365F96EB6B916C82F9965" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "4AEED0404FFB39FC70ED9B89";
+		};
+		"A4CB0F58D32FF8E72E44C597" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Sources/SurBox/SurBoxApp.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"E199947CCC1B63BC8ACE8DA9" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "A4CB0F58D32FF8E72E44C597";
+		};
+		"4DE1DC6D3019F0F22A076DD9" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-38.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"CB39746B6A53DA266D0B067C" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "4DE1DC6D3019F0F22A076DD9";
+		};
+		"15476A8A0018EE79898B0BB7" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-39.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"1A91C9B615EB95A3F0584908" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "15476A8A0018EE79898B0BB7";
+		};
+		"7F695A6D8FB97A843EA43184" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-62.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"0ED417C3C37D2C6EA7A0F50D" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "7F695A6D8FB97A843EA43184";
+		};
+		"7058B17796C47051B1D465FB" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-63.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"586A70C462C0E9ADE764E0CF" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "7058B17796C47051B1D465FB";
+		};
+		"061319F8A3D56305D65730F2" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-61.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"9659BC193214A0804D94363D" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "061319F8A3D56305D65730F2";
+		};
+		"CBE0F44DE3E035EEF4B19407" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-49.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"4317198DD37329FFEA5619A0" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "CBE0F44DE3E035EEF4B19407";
+		};
+		"60E3ECB048AF6DA93D6CDACB" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-48.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"F57F3A038509843CB6D51B36" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "60E3ECB048AF6DA93D6CDACB";
+		};
+		"2075EFF5616A32F0F439A720" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-60.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"21248DA4FC1733F374D6139B" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "2075EFF5616A32F0F439A720";
+		};
+		"55A6C4EC68950E7BDF962109" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-74.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"F6A17A81AC0A4147078D8971" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "55A6C4EC68950E7BDF962109";
+		};
+		"EF38D90DF5032DEF2754B8BA" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-58.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"A33B1C5B66D6251FCA79F2C4" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "EF38D90DF5032DEF2754B8BA";
+		};
+		"7523651216FE48546C6A7340" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-70.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"AEBA05059E4BB7B23B35BB4E" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "7523651216FE48546C6A7340";
+		};
+		"FEA0BC244B30B8F24E95C68E" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-64.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"B22D433D1F267139026322FD" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "FEA0BC244B30B8F24E95C68E";
+		};
+		"3641B0D3CC7F5E0EAF474F19" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-65.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"75EF9D4EBAFF4240BB39D25B" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "3641B0D3CC7F5E0EAF474F19";
+		};
+		"D367B7E3610AB402BBC83C8E" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-71.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"3B2E2864504EFC833479CB7D" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "D367B7E3610AB402BBC83C8E";
+		};
+		"847DF9CC6BFE37879BCDC193" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-59.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"654719FA73F5267C17CFB1CA" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "847DF9CC6BFE37879BCDC193";
+		};
+		"5DA38965CDCDBEC1C456163A" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-67.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"526DA9CF60868AA9FAE493C9" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "5DA38965CDCDBEC1C456163A";
+		};
+		"88493122AD547F6083A65800" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-73.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"1BAC73E34032285E99847294" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "88493122AD547F6083A65800";
+		};
+		"3B6D98564683CC2FC10ADD78" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-72.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"F3EB98A12E8775000C17894F" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "3B6D98564683CC2FC10ADD78";
+		};
+		"A284E8E5B0B726EA2AFFDDBF" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-66.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"A2357C072D328B92E270E423" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "A284E8E5B0B726EA2AFFDDBF";
+		};
+		"C945E3059A2EBAD458FC2806" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-43.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"578719E1CD9D65EA78EBF58A" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "C945E3059A2EBAD458FC2806";
+		};
+		"A9B0D00A754853705BBFEA1B" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-57.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"BB433FA27773A42FD74FA3B6" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "A9B0D00A754853705BBFEA1B";
+		};
+		"B35D03A35CEF7A5446897D0D" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-56.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"D8C94BA2451E1FED68F61513" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "B35D03A35CEF7A5446897D0D";
+		};
+		"0CA5D429FCA7C0E00360F355" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-42.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"CC0CE06B39F15F10497A44B5" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "0CA5D429FCA7C0E00360F355";
+		};
+		"CAF0BA14B0761A7E2A88D71D" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-54.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"46096E1752388D23271E9C34" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "CAF0BA14B0761A7E2A88D71D";
+		};
+		"1A34E7132C4D260F5953B657" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-40.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"8692742898FE6434D5078220" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "1A34E7132C4D260F5953B657";
+		};
+		"8056B6EEA7C886F6D142C73B" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-68.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"54731D526C1348BCC85D667D" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "8056B6EEA7C886F6D142C73B";
+		};
+		"4B921EF90F4340CAEAB7959E" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-69.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"0D72A41872B353E915F184C5" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "4B921EF90F4340CAEAB7959E";
+		};
+		"3AB545B22B3AFD5B0AD29C93" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-41.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"57C2466B7DBFC331189B1F3F" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "3AB545B22B3AFD5B0AD29C93";
+		};
+		"A098014A624CA083799D7F8D" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-55.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"2DB2E430D2220077DABB3DC2" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "A098014A624CA083799D7F8D";
+		};
+		"C9D85824856EF9B147D345E5" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-51.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"896654D96968DCE8A4C53FB4" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "C9D85824856EF9B147D345E5";
+		};
+		"5AACA189BFAF3FCE7DB621CA" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-45.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"BD9D95FD1B5EB6333FB11DFB" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "5AACA189BFAF3FCE7DB621CA";
+		};
+		"435AA95A5A25CEED5BB3130A" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-44.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"5E6BBA8304443E110AD943E9" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "435AA95A5A25CEED5BB3130A";
+		};
+		"8A47340F975D6C7F93CCABB2" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-50.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"56F06D40E9D4762AA0E34739" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "8A47340F975D6C7F93CCABB2";
+		};
+		"554D9CBEEC03ED7B1DFCAB8E" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-46.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"AFCA3453D0D47C51905B59D8" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "554D9CBEEC03ED7B1DFCAB8E";
+		};
+		"A66E4B9F97C799BCE1F2FD12" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-52.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"C4BD94A5BEBF3A8460E5E0B5" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "A66E4B9F97C799BCE1F2FD12";
+		};
+		"24D7B42DD28819BCFC1C36DE" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-53.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"B636B79A0421D081B3906D98" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "24D7B42DD28819BCFC1C36DE";
+		};
+		"A6916290834D37CC81B6D006" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-47.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"AE4B06848C3489FE213A4AAB" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "A6916290834D37CC81B6D006";
+		};
+		"28955B8202578CAB9C23FEE2" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-37.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"2AA9DFB7E6747DC9B48EA4D1" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "28955B8202578CAB9C23FEE2";
+		};
+		"E4EF22A8597E95B2BF267A03" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Samples/note-36.wav";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"ACDDF0CFC4743B0EE3CE4DFA" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "E4EF22A8597E95B2BF267A03";
+		};
+		"E856DFAF2D5FCDB9272283C1" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/samples.json";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"2B709FEEC5666E1F8A23D130" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "E856DFAF2D5FCDB9272283C1";
+		};
+		"9041DBF6C20E10E5B36A53CA" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Sources/SurBox/Resources/Audio-LICENSE.txt";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"AC7739613F00BA6DC180049D" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "9041DBF6C20E10E5B36A53CA";
+		};
+		"25AA0D5344965F9B6DD8561D" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file";
+			"path" = "Resources/AppIcon.icns";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"CE9517F7C32185422C8F40F5" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "25AA0D5344965F9B6DD8561D";
+		};
+		"CF10D5FD29A15E12631D3C55" = {
+			"isa" = "PBXGroup";
+			"name" = "SurBox";
+			"children" = (
+				"F00100000000000000000003",
+				"4B80BF79524D1DE8D027C020",
+				"96E8A1F67F488035D5749B87",
+				"664098DB77D55331D7430E52",
+				"143D5FFBC6913AF1D2631344",
+				"4AEED0404FFB39FC70ED9B89",
+				"A4CB0F58D32FF8E72E44C597",
+				"4DE1DC6D3019F0F22A076DD9",
+				"15476A8A0018EE79898B0BB7",
+				"7F695A6D8FB97A843EA43184",
+				"7058B17796C47051B1D465FB",
+				"061319F8A3D56305D65730F2",
+				"CBE0F44DE3E035EEF4B19407",
+				"60E3ECB048AF6DA93D6CDACB",
+				"2075EFF5616A32F0F439A720",
+				"55A6C4EC68950E7BDF962109",
+				"EF38D90DF5032DEF2754B8BA",
+				"7523651216FE48546C6A7340",
+				"FEA0BC244B30B8F24E95C68E",
+				"3641B0D3CC7F5E0EAF474F19",
+				"D367B7E3610AB402BBC83C8E",
+				"847DF9CC6BFE37879BCDC193",
+				"5DA38965CDCDBEC1C456163A",
+				"88493122AD547F6083A65800",
+				"3B6D98564683CC2FC10ADD78",
+				"A284E8E5B0B726EA2AFFDDBF",
+				"C945E3059A2EBAD458FC2806",
+				"A9B0D00A754853705BBFEA1B",
+				"B35D03A35CEF7A5446897D0D",
+				"0CA5D429FCA7C0E00360F355",
+				"CAF0BA14B0761A7E2A88D71D",
+				"1A34E7132C4D260F5953B657",
+				"8056B6EEA7C886F6D142C73B",
+				"4B921EF90F4340CAEAB7959E",
+				"3AB545B22B3AFD5B0AD29C93",
+				"A098014A624CA083799D7F8D",
+				"C9D85824856EF9B147D345E5",
+				"5AACA189BFAF3FCE7DB621CA",
+				"435AA95A5A25CEED5BB3130A",
+				"8A47340F975D6C7F93CCABB2",
+				"554D9CBEEC03ED7B1DFCAB8E",
+				"A66E4B9F97C799BCE1F2FD12",
+				"24D7B42DD28819BCFC1C36DE",
+				"A6916290834D37CC81B6D006",
+				"28955B8202578CAB9C23FEE2",
+				"E4EF22A8597E95B2BF267A03",
+				"E856DFAF2D5FCDB9272283C1",
+				"9041DBF6C20E10E5B36A53CA",
+				"25AA0D5344965F9B6DD8561D",
+			);
+			"sourceTree" = "<group>";
+		};
+		"283D93FCDDD7342AC95AB259" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"F00100000000000000000004",
+				"0C4E9225839E083168174D44",
+				"AF170B4152B250755ABB3D69",
+				"45137E11BF8B8DCCC450A807",
+				"8D1E3D9EFDF6B80FE334E201",
+				"1B0365F96EB6B916C82F9965",
+				"E199947CCC1B63BC8ACE8DA9",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"1D957098A68AAF5E9F5139EB" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "DD8E10B457C9B3560AA56622";
+		};
+		"086C9E63CE1AD75C91BBA945" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "D0983580373FA115FEA7CAE0";
+		};
+		"534E6EF300CB9817680335BE" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"1D957098A68AAF5E9F5139EB",
+				"086C9E63CE1AD75C91BBA945",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"002A12A8EC3A08EAE1B6388D" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"CB39746B6A53DA266D0B067C",
+				"1A91C9B615EB95A3F0584908",
+				"0ED417C3C37D2C6EA7A0F50D",
+				"586A70C462C0E9ADE764E0CF",
+				"9659BC193214A0804D94363D",
+				"4317198DD37329FFEA5619A0",
+				"F57F3A038509843CB6D51B36",
+				"21248DA4FC1733F374D6139B",
+				"F6A17A81AC0A4147078D8971",
+				"A33B1C5B66D6251FCA79F2C4",
+				"AEBA05059E4BB7B23B35BB4E",
+				"B22D433D1F267139026322FD",
+				"75EF9D4EBAFF4240BB39D25B",
+				"3B2E2864504EFC833479CB7D",
+				"654719FA73F5267C17CFB1CA",
+				"526DA9CF60868AA9FAE493C9",
+				"1BAC73E34032285E99847294",
+				"F3EB98A12E8775000C17894F",
+				"A2357C072D328B92E270E423",
+				"578719E1CD9D65EA78EBF58A",
+				"BB433FA27773A42FD74FA3B6",
+				"D8C94BA2451E1FED68F61513",
+				"CC0CE06B39F15F10497A44B5",
+				"46096E1752388D23271E9C34",
+				"8692742898FE6434D5078220",
+				"54731D526C1348BCC85D667D",
+				"0D72A41872B353E915F184C5",
+				"57C2466B7DBFC331189B1F3F",
+				"2DB2E430D2220077DABB3DC2",
+				"896654D96968DCE8A4C53FB4",
+				"BD9D95FD1B5EB6333FB11DFB",
+				"5E6BBA8304443E110AD943E9",
+				"56F06D40E9D4762AA0E34739",
+				"AFCA3453D0D47C51905B59D8",
+				"C4BD94A5BEBF3A8460E5E0B5",
+				"B636B79A0421D081B3906D98",
+				"AE4B06848C3489FE213A4AAB",
+				"2AA9DFB7E6747DC9B48EA4D1",
+				"ACDDF0CFC4743B0EE3CE4DFA",
+				"2B709FEEC5666E1F8A23D130",
+				"AC7739613F00BA6DC180049D",
+				"CE9517F7C32185422C8F40F5",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"6CB78CE73101C2B781915D29" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"path" = "SurBox.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+			"includeInIndex" = 0;
+		};
+		"9757C8193A0390975C535885" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"PRODUCT_NAME" = "SurBox";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.surbox.SurBox";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"INFOPLIST_FILE" = "Resources/Info.plist";
+				"ENABLE_HARDENED_RUNTIME" = "YES";
+				"ENABLE_APP_SANDBOX" = "NO";
+				"OTHER_LDFLAGS" = "$(inherited) -lc++";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"ENABLE_TESTABILITY" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+		};
+		"CE23DEB8CBAD5ACA4BE9A90D" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"PRODUCT_NAME" = "SurBox";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.surbox.SurBox";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"INFOPLIST_FILE" = "Resources/Info.plist";
+				"ENABLE_HARDENED_RUNTIME" = "YES";
+				"ENABLE_APP_SANDBOX" = "NO";
+				"OTHER_LDFLAGS" = "$(inherited) -lc++";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+		};
+		"2D516D3F1F351AA73A324D17" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"9757C8193A0390975C535885",
+				"CE23DEB8CBAD5ACA4BE9A90D",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"016A10BA578661E1367E24A1" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "98F54143AB4E86B28C3AFEE0";
+			"proxyType" = 1;
+			"remoteGlobalIDString" = "EB27BBAE0F7B92B6ECEA9521";
+			"remoteInfo" = "SurBoxCore";
+		};
+		"E8446FF5E0664B975FFA5883" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "EB27BBAE0F7B92B6ECEA9521";
+			"targetProxy" = "016A10BA578661E1367E24A1";
+		};
+		"4BA391A8384EF73154D02D24" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "98F54143AB4E86B28C3AFEE0";
+			"proxyType" = 1;
+			"remoteGlobalIDString" = "D59671139044DA0AC1B8550C";
+			"remoteInfo" = "SurBoxDSP";
+		};
+		"9F2DE9FEA83FC5AAA1F9A151" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "D59671139044DA0AC1B8550C";
+			"targetProxy" = "4BA391A8384EF73154D02D24";
+		};
+		"2B721C046C62184ACC68BF12" = {
+			"isa" = "PBXNativeTarget";
+			"name" = "SurBox";
+			"productName" = "SurBox";
+			"productType" = "com.apple.product-type.application";
+			"productReference" = "6CB78CE73101C2B781915D29";
+			"buildConfigurationList" = "2D516D3F1F351AA73A324D17";
+			"buildPhases" = (
+				"283D93FCDDD7342AC95AB259",
+				"534E6EF300CB9817680335BE",
+				"002A12A8EC3A08EAE1B6388D",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+				"E8446FF5E0664B975FFA5883",
+				"9F2DE9FEA83FC5AAA1F9A151",
+			);
+		};
+		"740699C4C553EDE9C0789979" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Tests/SurBoxCoreTests/InstrumentTests.swift";
+			"sourceTree" = "SOURCE_ROOT";
+		};
+		"A554FD0A6409A8EA601D97C4" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "740699C4C553EDE9C0789979";
+		};
+		"8C9D3A994DC03F2350B37855" = {
+			"isa" = "PBXGroup";
+			"name" = "SurBoxCoreTests";
+			"children" = (
+				"740699C4C553EDE9C0789979",
+			);
+			"sourceTree" = "<group>";
+		};
+		"37003C51C8A35B14C928E6D8" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"A554FD0A6409A8EA601D97C4",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"6A0F7880BDFB6B3D68C7302D" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "DD8E10B457C9B3560AA56622";
+		};
+		"6DA3A43BD39E4A78B19E20EA" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "D0983580373FA115FEA7CAE0";
+		};
+		"293C20EC725958E178B96AAA" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"6A0F7880BDFB6B3D68C7302D",
+				"6DA3A43BD39E4A78B19E20EA",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"4D8493330D0A7F2CEE2F2B61" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"851384013BB784BBDD67307E" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"path" = "SurBoxCoreTests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+			"includeInIndex" = 0;
+		};
+		"1DF897EB84A6502A4C93DB80" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"PRODUCT_NAME" = "SurBoxCoreTests";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.surbox.SurBoxCoreTests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"SKIP_INSTALL" = "YES";
+				"OTHER_LDFLAGS" = "$(inherited) -lc++";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"ENABLE_TESTABILITY" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+		};
+		"F4DB2A7FCB1B3E992C0B4FCF" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"PRODUCT_NAME" = "SurBoxCoreTests";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "local.surbox.SurBoxCoreTests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"SKIP_INSTALL" = "YES";
+				"OTHER_LDFLAGS" = "$(inherited) -lc++";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+		};
+		"DB446573917EABD88A234E36" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"1DF897EB84A6502A4C93DB80",
+				"F4DB2A7FCB1B3E992C0B4FCF",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"BB329AF1E047F31796B3480A" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "98F54143AB4E86B28C3AFEE0";
+			"proxyType" = 1;
+			"remoteGlobalIDString" = "EB27BBAE0F7B92B6ECEA9521";
+			"remoteInfo" = "SurBoxCore";
+		};
+		"205DA6BF811A9CEEAF6C2E7C" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "EB27BBAE0F7B92B6ECEA9521";
+			"targetProxy" = "BB329AF1E047F31796B3480A";
+		};
+		"5407FC5F9252575ADA308F82" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "98F54143AB4E86B28C3AFEE0";
+			"proxyType" = 1;
+			"remoteGlobalIDString" = "D59671139044DA0AC1B8550C";
+			"remoteInfo" = "SurBoxDSP";
+		};
+		"C1BC04D00305987FB63E1399" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "D59671139044DA0AC1B8550C";
+			"targetProxy" = "5407FC5F9252575ADA308F82";
+		};
+		"E206530E74141E497CF2F315" = {
+			"isa" = "PBXNativeTarget";
+			"name" = "SurBoxCoreTests";
+			"productName" = "SurBoxCoreTests";
+			"productType" = "com.apple.product-type.bundle.unit-test";
+			"productReference" = "851384013BB784BBDD67307E";
+			"buildConfigurationList" = "DB446573917EABD88A234E36";
+			"buildPhases" = (
+				"37003C51C8A35B14C928E6D8",
+				"293C20EC725958E178B96AAA",
+				"4D8493330D0A7F2CEE2F2B61",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+				"205DA6BF811A9CEEAF6C2E7C",
+				"C1BC04D00305987FB63E1399",
+			);
+		};
+		"FBDC4F23F93125BBEEAE800C" = {
+			"isa" = "PBXGroup";
+			"name" = "Products";
+			"children" = (
+				"DD8E10B457C9B3560AA56622",
+				"D0983580373FA115FEA7CAE0",
+				"6CB78CE73101C2B781915D29",
+				"851384013BB784BBDD67307E",
+			);
+			"sourceTree" = "<group>";
+		};
+		"B28B7AF69320201D1CF206EB" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"C7C7C62297BABE61AD17D623",
+				"E48BCDBA0EB5BB397B7E4051",
+				"CF10D5FD29A15E12631D3C55",
+				"8C9D3A994DC03F2350B37855",
+				"FBDC4F23F93125BBEEAE800C",
+			);
+			"sourceTree" = "<group>";
+		};
+		"BFD315016DE16320F7E2120C" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"ENABLE_TESTABILITY" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+		};
+		"1D8C0C6B1D22EA8C7669B263" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"MACOSX_DEPLOYMENT_TARGET" = "14.0";
+				"SDKROOT" = "macosx";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "c++17";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"SWIFT_INCLUDE_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"HEADER_SEARCH_PATHS" = "$(inherited) $(SRCROOT)/Sources/SurBoxDSP/include";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+		};
+		"128D1971520EF7E0088A5374" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"BFD315016DE16320F7E2120C",
+				"1D8C0C6B1D22EA8C7669B263",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"98F54143AB4E86B28C3AFEE0" = {
+			"isa" = "PBXProject";
+			"attributes" = {
+				"BuildIndependentTargetsInParallel" = "YES";
+				"LastUpgradeCheck" = "1600";
+			};
+			"buildConfigurationList" = "128D1971520EF7E0088A5374";
+			"compatibilityVersion" = "Xcode 14.0";
+			"developmentRegion" = "en";
+			"hasScannedForEncodings" = 0;
+			"knownRegions" = (
+				"en",
+				"Base",
+			);
+			"mainGroup" = "B28B7AF69320201D1CF206EB";
+			"productRefGroup" = "FBDC4F23F93125BBEEAE800C";
+			"projectDirPath" = "";
+			"projectRoot" = "";
+			"targets" = (
+				"EB27BBAE0F7B92B6ECEA9521",
+				"D59671139044DA0AC1B8550C",
+				"2B721C046C62184ACC68BF12",
+				"E206530E74141E497CF2F315",
+			);
+		};
+	};
+	"rootObject" = "98F54143AB4E86B28C3AFEE0";
+}

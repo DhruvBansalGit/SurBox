@@ -1,0 +1,39 @@
+SurBox 1.0.0 — local engineering preview
+Published 2026-10-27
+
+Native macOS 14+ harmonium. Supplied binary: Apple Silicon / arm64.
+
+- Fixed-pivot, interactive 3D bellows with twelve accordion pleats.
+- 37 keyboard keys, computer-keyboard chords and mouse glissando.
+- Stateful airflow, reserve, air assist, volume, mute and octave controls.
+- Tonic selection, sargam labels, practice scales and Sa/Pa drones.
+- 39 bundled acoustic note recordings from Donya Quick's CC0 source.
+- Real MacBook lid-angle input when the compatible sensor is exposed.
+- Explicit synthesized fallback and unsupported-lid messages.
+
+IMPORTANT
+This is a native app download, not an instrument running on Vercel or in a browser.
+The app is ad-hoc signed, not notarized or Developer ID signed.
+A downloaded copy may require macOS's normal trusted-app approval flow.
+Do not disable Gatekeeper or other system protections globally.
+
+The 2020 M1 MacBook Air used for development exposes no continuous lid-angle
+sensor. Its open/closed switch cannot measure flapping. Actual physical lid
+tracking on compatible hardware remains unverified. Software integration was
+tested with explicitly injected readings, not fabricated hardware output.
+
+Verification: 16 deterministic groups; 53 primary native checks. Human listening,
+physical sensor behavior, VoiceOver, device hot-plug and wider hardware acceptance
+remain open. Details: verification.txt and lid-tracking.txt.
+
+Downloads
+/downloads/SurBox-macOS-arm64.zip
+/downloads/SurBox-source.zip
+/downloads/SHA256SUMS.txt
+
+No account, microphone permission, paid API or internet is needed to play.
+Audio source/attribution: https://freesound.org/people/donyaquick/sounds/330410/
+License: CC0 1.0, derived from the HQ MP3 preview rather than the lossless WAV.
+
+The owner-designated GitHub repository is https://github.com/DhruvBansalGit/SurBox
+The source ZIP here is available independently of GitHub publishing permissions.

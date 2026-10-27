@@ -1,0 +1,236 @@
+[
+  {
+    "midi": 36,
+    "file": "note-36.wav",
+    "loopStart": 37485,
+    "loopEnd": 190932
+  },
+  {
+    "midi": 37,
+    "file": "note-37.wav",
+    "loopStart": 37485,
+    "loopEnd": 191891
+  },
+  {
+    "midi": 38,
+    "file": "note-38.wav",
+    "loopStart": 37485,
+    "loopEnd": 191117
+  },
+  {
+    "midi": 39,
+    "file": "note-39.wav",
+    "loopStart": 37485,
+    "loopEnd": 192599
+  },
+  {
+    "midi": 40,
+    "file": "note-40.wav",
+    "loopStart": 37485,
+    "loopEnd": 194296
+  },
+  {
+    "midi": 41,
+    "file": "note-41.wav",
+    "loopStart": 37485,
+    "loopEnd": 192655
+  },
+  {
+    "midi": 42,
+    "file": "note-42.wav",
+    "loopStart": 37485,
+    "loopEnd": 191739
+  },
+  {
+    "midi": 43,
+    "file": "note-43.wav",
+    "loopStart": 37485,
+    "loopEnd": 192382
+  },
+  {
+    "midi": 44,
+    "file": "note-44.wav",
+    "loopStart": 37485,
+    "loopEnd": 192016
+  },
+  {
+    "midi": 45,
+    "file": "note-45.wav",
+    "loopStart": 37485,
+    "loopEnd": 191829
+  },
+  {
+    "midi": 46,
+    "file": "note-46.wav",
+    "loopStart": 37485,
+    "loopEnd": 192597
+  },
+  {
+    "midi": 47,
+    "file": "note-47.wav",
+    "loopStart": 37485,
+    "loopEnd": 192270
+  },
+  {
+    "midi": 48,
+    "file": "note-48.wav",
+    "loopStart": 37485,
+    "loopEnd": 192614
+  },
+  {
+    "midi": 49,
+    "file": "note-49.wav",
+    "loopStart": 37485,
+    "loopEnd": 192398
+  },
+  {
+    "midi": 50,
+    "file": "note-50.wav",
+    "loopStart": 37485,
+    "loopEnd": 193099
+  },
+  {
+    "midi": 51,
+    "file": "note-51.wav",
+    "loopStart": 37485,
+    "loopEnd": 192398
+  },
+  {
+    "midi": 52,
+    "file": "note-52.wav",
+    "loopStart": 37485,
+    "loopEnd": 193185
+  },
+  {
+    "midi": 53,
+    "file": "note-53.wav",
+    "loopStart": 37485,
+    "loopEnd": 192801
+  },
+  {
+    "midi": 54,
+    "file": "note-54.wav",
+    "loopStart": 37485,
+    "loopEnd": 193305
+  },
+  {
+    "midi": 55,
+    "file": "note-55.wav",
+    "loopStart": 37485,
+    "loopEnd": 193059
+  },
+  {
+    "midi": 56,
+    "file": "note-56.wav",
+    "loopStart": 37485,
+    "loopEnd": 192992
+  },
+  {
+    "midi": 57,
+    "file": "note-57.wav",
+    "loopStart": 37485,
+    "loopEnd": 193105
+  },
+  {
+    "midi": 58,
+    "file": "note-58.wav",
+    "loopStart": 37485,
+    "loopEnd": 193081
+  },
+  {
+    "midi": 59,
+    "file": "note-59.wav",
+    "loopStart": 37485,
+    "loopEnd": 193293
+  },
+  {
+    "midi": 60,
+    "file": "note-60.wav",
+    "loopStart": 37485,
+    "loopEnd": 193176
+  },
+  {
+    "midi": 61,
+    "file": "note-61.wav",
+    "loopStart": 37485,
+    "loopEnd": 193275
+  },
+  {
+    "midi": 62,
+    "file": "note-62.wav",
+    "loopStart": 37485,
+    "loopEnd": 193127
+  },
+  {
+    "midi": 63,
+    "file": "note-63.wav",
+    "loopStart": 37485,
+    "loopEnd": 193271
+  },
+  {
+    "midi": 64,
+    "file": "note-64.wav",
+    "loopStart": 37485,
+    "loopEnd": 192729
+  },
+  {
+    "midi": 65,
+    "file": "note-65.wav",
+    "loopStart": 37485,
+    "loopEnd": 193195
+  },
+  {
+    "midi": 66,
+    "file": "note-66.wav",
+    "loopStart": 37485,
+    "loopEnd": 193242
+  },
+  {
+    "midi": 67,
+    "file": "note-67.wav",
+    "loopStart": 37485,
+    "loopEnd": 193405
+  },
+  {
+    "midi": 68,
+    "file": "note-68.wav",
+    "loopStart": 37485,
+    "loopEnd": 193152
+  },
+  {
+    "midi": 69,
+    "file": "note-69.wav",
+    "loopStart": 37485,
+    "loopEnd": 193713
+  },
+  {
+    "midi": 70,
+    "file": "note-70.wav",
+    "loopStart": 37485,
+    "loopEnd": 193458
+  },
+  {
+    "midi": 71,
+    "file": "note-71.wav",
+    "loopStart": 37485,
+    "loopEnd": 193106
+  },
+  {
+    "midi": 72,
+    "file": "note-72.wav",
+    "loopStart": 37485,
+    "loopEnd": 193016
+  },
+  {
+    "midi": 73,
+    "file": "note-73.wav",
+    "loopStart": 37485,
+    "loopEnd": 193248
+  },
+  {
+    "midi": 74,
+    "file": "note-74.wav",
+    "loopStart": 37485,
+    "loopEnd": 193413
+  }
+]

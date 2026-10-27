@@ -1,0 +1,4 @@
+module SurBoxDSP {
+    header "SurBoxDSP.h"
+    export *
+}

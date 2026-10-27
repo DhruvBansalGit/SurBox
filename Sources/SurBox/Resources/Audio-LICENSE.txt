@@ -1,0 +1,30 @@
+SurBox acoustic harmonium recordings
+
+Original: Harmonium Samples - All Keys and Drones
+Creator: Donya Quick (Freesound username donyaquick)
+Source: https://freesound.org/people/donyaquick/sounds/330410/
+Published: December 7, 2015
+Recording location, per creator: Euterpea Studio, Department of Computer Science,
+Yale University. Some equalization was applied after recording.
+License: Creative Commons CC0 1.0 Universal / public-domain dedication.
+https://creativecommons.org/publicdomain/zero/1.0/
+https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Downloaded development asset:
+https://cdn.freesound.org/previews/330/330410_1089898-hq.mp3
+This is the high-quality lossy MP3 preview, NOT the original lossless WAV.
+The source page explicitly permits copying, modifying and distributing the
+sound, including commercial use, without permission. A source-page snapshot
+and content hash are retained under AudioSource for provenance.
+
+SurBox modifications: mono PCM conversion, 39 note slices, 35 Hz high-pass,
+per-note gain normalization, small equal-temperament pitch correction based
+on the lower reed fundamental, onset/end fades, and looping metadata.
+Playback adds a 60 ms loop crossfade, envelopes, and airflow intensity.
+The recording's paired/octave reeds and natural beating are retained.
+No claim of separate physical reed-stop samples is made.
+Derived audio is distributed under CC0 as well. No endorsement by the creator,
+Yale University, Freesound, or Creative Commons is implied.
+
+The clearly labeled emergency synthesized reed fallback and the procedural
+wood/3D visual assets are original SurBox implementation assets, not recordings.

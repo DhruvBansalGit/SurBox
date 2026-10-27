@@ -1,0 +1,27 @@
+.build/
+.swiftpm/
+.DS_Store
+.env
+.env.*
+!.env.example
+.vercel/
+**/.vercel/
+node_modules/
+site/downloads/
+artifacts/*.app/
+artifacts/*.zip
+artifacts/testing/CoreChecks
+artifacts/testing/*-process.txt
+artifacts/testing/build.txt
+artifacts/testing/delivered-hashes.json
+artifacts/testing/*/*.wav
+artifacts/testing/*/*.png
+!artifacts/testing/native/*.png
+**/xcuserdata/
+**/__pycache__/
+artifacts/publishing/
+Resources/AppIcon.iconset/
+AudioSource/source-decoded.wav
+# Raw fetched HTML contains irrelevant session/CSRF markup; retain provenance
+# URL, explicit audio license and extraction hash, not that web session snapshot.
+AudioSource/source-page.html

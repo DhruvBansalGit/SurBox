@@ -1,0 +1,61 @@
+PASS SceneKit uses native Metal
+PASS 37 individually modeled keys
+INFO Actual lid sensor: available=false, degrees=none, status=No compatible continuous lid-angle sensor is exposed by this Mac. A binary lid-open switch cannot track flapping.
+PASS Real lid sensor probe resolves without blocking the UI
+PASS Absent physical sensor does not fabricate lid motion
+PASS AVAudioEngine starts on actual output device
+PASS All 39 bundled recordings decode
+PASS Starts folded
+PASS Real hit-tested panel starts drag
+PASS Dragging visibly opens rotating panel
+PASS Hinge world pivot remains fixed
+PASS Main body is stationary during pumping
+PASS Keyboard stays stationary during pumping
+PASS Pointer movement replenishes actual airflow reserve
+PASS Twelve accordion pleats expand as 24 facets
+PASS Reverse drag closes and clamps panel
+PASS Open and closed Metal renders differ
+PASS Computer keyboard chord C/E/G
+PASS Auto-repeat does not duplicate notes
+PASS Mouse click hits cream key
+PASS Mouse release preserves computer-held pitch
+PASS Key releases clear chord
+PASS Pointer glissando changes pitch without stuck notes
+PASS Glissando release clears note
+PASS Raised black key hit-test wins
+PASS Octave change releases old pitches
+PASS Selectable Sa and fifth drones
+PASS Mute releases sounding notes
+PASS Space pump works and stops on release
+PASS App deactivation prevents stuck keys and pumping
+PASS Escape is immediate panic
+PASS Accessibility exposes 37 keys and hinged bellows
+PASS Accessible key includes Western and relative Indian note
+PASS Accessibility press holds a note
+PASS Accessibility second press releases note
+PASS Accessible bellows opens
+PASS Accessible bellows closes
+PASS Keyboard focus loss releases notes
+PASS Full body and maximum-open panel fit default viewport without cropping
+INFO default projected bounds x=199.63229370117188..935.0313110351562 y=32.7071647644043..489.87030029296875, viewport=(1180.0, 529.0)
+PASS Compact window retains playable scene
+PASS Full body and maximum-open panel fit compact viewport without cropping
+INFO compact projected bounds x=154.1778106689453..664.3695068359375 y=22.690980911254883..339.8533020019531, viewport=(850.0, 367.0)
+PASS 600 rapid notes and bellows reversals leave valid state
+INFO 600 scene/state updates: 31.007 s (includes deliberate yields; not hardware latency)
+PASS Sustained 8-voice playing with bellows: 5 seconds / 90 updates
+PASS Actual running AVAudioEngine mixer produces nonzero unclipped chord
+INFO live mixer sample rate=44100.0, frames=35280, peak=0.10706229
+PASS Offline renderer loads complete sample manifest
+PASS Production sampled DSP produces nonzero audible-range PCM
+PASS Chord with multiple loop wraps remains bounded without abrupt sample jumps
+PASS Released sample chord decays to silence
+INFO sampled PCM peak=0.19006 max adjacent jump=0.04580 tail=0.00000000; max 256-frame render 0.014 ms
+PASS Injected lid: first reading calibrates without a jump
+PASS Injected lid: opening rotates actual bellows and pumps air
+PASS Injected lid: closing reverses bellows while held note continues
+PASS Injected lid: read failure disables tracking without a fake stroke
+PASS Injected lid: disabled tracking ignores screen movement
+PASS Injected lid: near-close state releases notes and pauses
+INFO Physical movement acceptance remains unverified; integration tests above used injected angle readings.
+RESULT native checks=53 failures=0
