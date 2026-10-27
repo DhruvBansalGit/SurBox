@@ -1,0 +1,63 @@
+name: Windows native build and checks
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['cross-platform/windows/**', 'Sources/SurBoxDSP/**', '.github/workflows/windows-native.yml']
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Build native Win32 app with MSVC
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $vs = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products '*' -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+          New-Item -ItemType Directory -Force dist\SurBox-Windows-x64\samples, validation | Out-Null
+          $commands = @"
+          @echo off
+          call "$vs\VC\Auxiliary\Build\vcvars64.bat"
+          cl /nologo /std:c++17 /EHsc /O2 /MT /utf-8 /I Sources\SurBoxDSP\include cross-platform\windows\SurBox.cpp Sources\SurBoxDSP\SurBoxDSP.cpp /Fe:dist\SurBox-Windows-x64\SurBox.exe /link /SUBSYSTEM:WINDOWS user32.lib gdi32.lib comctl32.lib winmm.lib shell32.lib
+          if errorlevel 1 exit /b 1
+          cl /nologo /std:c++17 /EHsc /O2 /MT /utf-8 /I Sources\SurBoxDSP\include cross-platform\windows\LogicTests.cpp Sources\SurBoxDSP\SurBoxDSP.cpp /Fe:validation\logic-checks.exe
+          "@
+          $commands | Set-Content build-native.cmd
+          cmd /c build-native.cmd
+          if ($LASTEXITCODE -ne 0) { throw 'MSVC build failed' }
+          Copy-Item Sources\SurBox\Resources\Samples\*.wav dist\SurBox-Windows-x64\samples
+          $manifest = Get-Content Sources\SurBox\Resources\samples.json -Raw | ConvertFrom-Json
+          $manifest | ForEach-Object { "$($_.midi) $($_.loopStart) $($_.loopEnd) $($_.file)" } | Set-Content -Encoding ascii dist\SurBox-Windows-x64\samples\manifest.txt
+          Copy-Item Sources\SurBox\Resources\Audio-LICENSE.txt dist\SurBox-Windows-x64
+          Copy-Item cross-platform\windows\README.txt dist\SurBox-Windows-x64
+      - name: Run real Windows processes and native UI events
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & .\validation\logic-checks.exe | Tee-Object validation\logic-results.txt
+          if ($LASTEXITCODE -ne 0) { throw 'Windows core tests failed' }
+          foreach ($mode in @('--self-test','--ui-test')) {
+            $process = Start-Process -FilePath "$PWD\dist\SurBox-Windows-x64\SurBox.exe" -ArgumentList $mode -PassThru
+            if (!$process.WaitForExit(60000)) { $process.Kill(); throw "Timed out: $mode" }
+            if ($process.ExitCode -ne 0) { throw "SurBox failed: $mode" }
+          }
+          Copy-Item dist\SurBox-Windows-x64\windows-*.txt validation
+          Copy-Item dist\SurBox-Windows-x64\windows-ui.bmp validation
+          Get-Content validation\windows-self-test.txt,validation\windows-ui-test.txt
+          if (Select-String -Path validation\windows-*.txt -Pattern '^FAIL' -Quiet) { throw 'Native assertions failed' }
+          Remove-Item dist\SurBox-Windows-x64\windows-*.txt,dist\SurBox-Windows-x64\windows-ui.bmp
+          Compress-Archive -Path dist\SurBox-Windows-x64 -DestinationPath dist\SurBox-Windows-x64.zip
+          Get-FileHash dist\SurBox-Windows-x64.zip -Algorithm SHA256 | Format-List | Out-File validation\sha256.txt
+      - name: Upload binary and evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: surbox-windows-native
+          path: |
+            dist/SurBox-Windows-x64.zip
+            validation/*.txt
+            validation/*.bmp
+          retention-days: 14

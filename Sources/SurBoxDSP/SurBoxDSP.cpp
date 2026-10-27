@@ -22,7 +22,8 @@ struct SBEngine {
         // Explicitly synthetic fallback: static band-limited reed wavetable,
         // never mislabeled as a recording. No random work in render callback.
         for(int i=0;i<4096;i++) {
-            double p=2*M_PI*i/4096, v=0;
+            // Standard C++ does not require the non-portable M_PI macro.
+            double p=2*3.14159265358979323846*i/4096, v=0;
             for(int h=1;h<=12;h++) v+=sin(p*h+0.07*h)/(pow(h,1.35))*(h%2?1:0.70);
             reed[i]=float(v*0.32);
         }

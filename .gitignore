@@ -7,6 +7,16 @@
 .vercel/
 **/.vercel/
 node_modules/
+cross-platform/**/build/
+artifacts/android/
+artifacts/windows/
+artifacts/testing/portable/*.class
+artifacts/testing/portable/ai/
+artifacts/testing/portable/cpp-checks
+*.p12
+*.jks
+*.keystore
+*.password
 site/downloads/
 artifacts/*.app/
 artifacts/*.zip
