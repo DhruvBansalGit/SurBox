@@ -1,0 +1,17 @@
+PASS Closed limit
+PASS Open limit
+PASS Reject nonfinite angle
+PASS Independent source ownership
+PASS Chord polyphony
+PASS Panic clears notes
+PASS Opening pumps
+PASS Closing pumps
+PASS Resting air drains
+PASS Air assist floor
+PASS Tonic and fifth drones
+PASS Octave clears old notes
+PASS DSP begins silent
+PASS Fallback polyphony bounded
+PASS Release reaches silence
+PASS Sample transposition and repeated loops
+RESULT 16 deterministic Java checks passed

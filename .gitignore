@@ -27,6 +27,10 @@ artifacts/testing/delivered-hashes.json
 artifacts/testing/*/*.wav
 artifacts/testing/*/*.png
 !artifacts/testing/native/*.png
+!artifacts/testing/android/android-playing.png
+!artifacts/testing/windows/windows-ui.png
+artifacts/testing/windows/*.bmp
+artifacts/testing/windows/sha256.txt
 **/xcuserdata/
 **/__pycache__/
 artifacts/publishing/

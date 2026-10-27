@@ -1,0 +1,14 @@
+PASS Closed stop
+PASS Open stop
+PASS Note ownership
+PASS Chord
+PASS Panic
+PASS Opening supplies air
+PASS Closing supplies air
+PASS Resting decay
+PASS Air assist
+PASS Relative drones
+PASS Octave clears old notes
+PASS Native shared DSP polyphony
+PASS Native DSP release
+RESULT 13 C++ logic/DSP checks passed on host (not Windows UI)

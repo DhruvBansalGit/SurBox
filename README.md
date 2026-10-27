@@ -1,5 +1,18 @@
 # SurBox
 
+## Now available for macOS, Windows and Android
+
+Choose your platform at **[surbox.vercel.app/#downloads](https://surbox.vercel.app/#downloads)**. Native Android (Java/Canvas/AudioTrack) and Windows (Win32/C++/native PCM) previews now accompany the original macOS app; these are not web wrappers. All include the acoustic recordings and offline bellows/key playback.
+
+- [Android 8+ universal APK](https://surbox.vercel.app/downloads/SurBox-Android.apk) — signed direct-install package, landscape multitouch; Android 15 emulator tested, not Play Store distributed.
+- [Windows 10/11 x64 ZIP](https://surbox.vercel.app/downloads/SurBox-Windows-x64.zip) — extract all files and run SurBox.exe; built and tested on a Windows runner, unsigned and still a hardware-validation preview.
+- [Apple Silicon macOS ZIP](https://surbox.vercel.app/downloads/SurBox-macOS-arm64.zip) — original app retained.
+- [Platform build/setup](cross-platform/README.md) and [platform test report](PLATFORM_TESTING.md).
+
+Windows and Android use mouse/touch or Space pumping, **not physical screen-flapping input**. Physical listening, input/audio latency, device switching and full accessibility acceptance remain unverified. The platform hint on the website is advisory; every download stays visible. iOS, Linux, Windows ARM-native and macOS Intel binaries are not supplied.
+
+## Original macOS edition
+
 A native, offline macOS harmonium with a genuinely hinged 3D bellows, a responsive 37-key keyboard, stateful airflow and bundled acoustic reed recordings. SwiftUI / AppKit, SceneKit / Metal, AVAudioEngine, and a small allocation-free C++ DSP mixer. macOS 14 or later. No third-party runtime packages, account, API key, microphone permission or network service.
 
 ## Physical screen control — hardware-dependent

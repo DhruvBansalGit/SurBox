@@ -1,50 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SurBox is a native, offline macOS harmonium with folding 3D bellows, acoustic reed recordings and optional MacBook lid tracking on compatible hardware.">
-  <meta name="theme-color" content="#101313">
-  <title>SurBox — A little air. A living sound.</title>
-  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Download SurBox for macOS, Windows or Android: native offline harmonium apps with hinged bellows, acoustic reed recordings and touch or keyboard controls.">
+  <meta name="theme-color" content="#101313"><title>SurBox — A little air. A living sound.</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script defer src="platform.js"></script>
 </head>
 <body>
-  <!-- Static distribution page only. The instrument runs natively on macOS;
-       never imply that Vercel or a browser can read the MacBook lid sensor. -->
+  <!-- Distribution page, not a web instrument. Never imply browser lid access. -->
   <a class="skip" href="#main">Skip to content</a>
-  <header class="wrap masthead">
-    <a class="wordmark" href="/" aria-label="SurBox home">SURBOX<span>Native harmonium</span></a>
-    <nav aria-label="Main navigation"><a href="#compatibility">Compatibility</a><a href="https://github.com/DhruvBansalGit/SurBox">GitHub <span aria-hidden="true">↗</span></a></nav>
-  </header>
+  <header class="wrap masthead"><a class="wordmark" href="/" aria-label="SurBox home">SURBOX<span>Native harmonium</span></a><nav aria-label="Main navigation"><a href="#downloads">Downloads</a><a href="#compatibility">Compatibility</a><a href="https://github.com/DhruvBansalGit/SurBox">GitHub <span aria-hidden="true">↗</span></a></nav></header>
   <main id="main">
     <section class="wrap hero">
-      <p class="eyebrow">An instrument for your Mac</p>
-      <h1>A little air.<br><em>A living sound.</em></h1>
-      <p class="intro">Play an Indian harmonium with tactile keys, folding bellows and acoustic reed recordings. Built natively for macOS. Yours to play offline.</p>
-      <div class="actions">
-        <a class="button" href="downloads/SurBox-macOS-arm64.zip" download>Download for Apple Silicon <span aria-hidden="true">↓</span></a>
-        <a class="text-link" href="downloads/SurBox-source.zip" download>Download the source <span aria-hidden="true">↓</span></a>
+      <p class="eyebrow">An instrument for your everyday device</p><h1>A little air.<br><em>A living sound.</em></h1>
+      <p class="intro">Play an Indian harmonium with tactile keys, folding bellows and acoustic reed recordings. Native apps for macOS, Windows and Android. Yours to play offline.</p>
+      <div class="actions"><a class="button" href="#downloads">Choose your download <span aria-hidden="true">↓</span></a><a class="text-link" href="downloads/SurBox-source.zip" download>Download the source <span aria-hidden="true">↓</span></a></div>
+      <p class="download-note">Offline native apps · No account required · Engineering previews</p>
+      <figure class="instrument"><img src="assets/surbox-playing.webp" width="1180" height="800" alt="The actual SurBox macOS interface with a wood harmonium, expanded accordion bellows and three pressed keys"><figcaption>macOS native app capture. This website is a download page, not a browser instrument.</figcaption></figure>
+    </section>
+    <section class="wrap downloads" id="downloads" aria-labelledby="download-heading">
+      <p class="eyebrow">Your system. Your instrument.</p><h2 id="download-heading">Download SurBox</h2>
+      <p id="platform-hint">Choose the version for your device. All three downloads include the acoustic recordings.</p>
+      <div class="platform-grid">
+        <article class="platform-card" data-platform="mac"><span class="platform-label">Desktop</span><h3>macOS</h3><p class="system">Apple Silicon · macOS 14+</p><p>SwiftUI, SceneKit and native audio. Optional physical lid input only when a compatible MacBook sensor is exposed.</p><a class="button" href="downloads/SurBox-macOS-arm64.zip" download>Download Mac ZIP</a><small>Ad-hoc signed, not notarized. Intel binary not provided.</small></article>
+        <article class="platform-card" data-platform="windows"><span class="platform-label">Desktop preview</span><h3>Windows</h3><p class="system">Windows 10 / 11 · x64</p><p>Native Win32 app with hinged perspective bellows, keyboard chords, mouse glissando and the same acoustic recordings.</p><a class="button" href="downloads/SurBox-Windows-x64.zip" download>Download Windows ZIP</a><small>Extract the entire ZIP, then run SurBox.exe. Unsigned; SmartScreen may warn. Windows runner tested; physical audio hardware review remains.</small></article>
+        <article class="platform-card" data-platform="android"><span class="platform-label">Mobile preview</span><h3>Android</h3><p class="system">Android 8.0+ · Universal APK</p><p>Native touch instrument with two-finger chords and independently draggable bellows. Landscape layout for wider keys.</p><a class="button" href="downloads/SurBox-Android.apk" download>Download Android APK</a><small>Direct signed APK, not a Play Store listing. Allow installation from your browser only if you trust the download. Android 15 emulator tested; physical-device review remains.</small></article>
       </div>
-      <p class="download-note">macOS 14+ · Native desktop app · Local engineering preview</p>
-      <figure class="instrument"><img src="assets/surbox-playing.webp" width="1180" height="800" alt="The actual SurBox macOS interface with a wood harmonium, expanded accordion bellows and three pressed keys"><figcaption>Captured from the native app. This website is a download page, not a browser instrument.</figcaption></figure>
+      <p class="platform-footnote">Windows and Android use pointer/touch pumping, <strong>not physical screen-flapping sensors</strong>. iPhone, Linux and Windows ARM-native packages are not included. <a href="platform-testing.txt">Platform verification &amp; limits</a> · <a href="downloads/SHA256SUMS.txt">Verify checksums</a></p>
+      <div class="platform-previews"><figure><img src="assets/surbox-windows.webp" width="1120" height="800" loading="lazy" alt="Actual native SurBox interface captured on the Windows runner"><figcaption>Windows · actual native runner capture</figcaption></figure><figure><img src="assets/surbox-android.webp" width="2400" height="1080" loading="lazy" alt="SurBox Android landscape app playing a chord with expanded bellows"><figcaption>Android · actual emulator capture</figcaption></figure></div>
     </section>
     <section class="wrap features" aria-label="Instrument features">
       <article><span class="number">01</span><h2>Give it breath</h2><p>Drag the hinged bellows to charge an air reserve. Opening and closing feed the reeds; adjustable air assist makes it easy to begin.</p></article>
-      <article><span class="number">02</span><h2>Find your Sa</h2><p>Play chords with your computer keyboard, glide over 37 on-screen keys, choose a tonic, and add Sa or Pa drones.</p></article>
+      <article><span class="number">02</span><h2>Find your Sa</h2><p>Play chords with your computer keyboard or multiple fingers, glide over the on-screen keys, choose a tonic, and add Sa or Pa drones.</p></article>
       <article><span class="number">03</span><h2>Hear real reeds</h2><p>39 notes derived from Donya Quick’s CC0 acoustic harmonium recording. Local playback, smooth loops and a clearly labeled fallback.</p></article>
     </section>
-    <section class="wrap compatibility" id="compatibility">
-      <div><p class="eyebrow">Before you download</p><h2>A real instrument.<br>Honest requirements.</h2></div>
-      <div class="requirements">
-        <details open><summary>Will moving my MacBook screen play the bellows?</summary><p>Only if your Mac exposes a compatible continuous lid-angle sensor. SurBox checks the hardware and shows the actual status. The <strong>2020 M1 MacBook Air does not expose that sensor</strong>; its open/closed switch cannot measure flapping. Mouse and Space-key pumping still work.</p><p>Lid integration has been tested with injected readings. Actual hand-moved tracking on a compatible Mac remains unverified. Move any supported screen gently; never force the hinge. Normal lid-close sleep stays enabled.</p></details>
-        <details><summary>Which Macs can run the app?</summary><p>The download is for Apple Silicon running macOS 14 or later, built and launched on macOS 15.5. Intel users must build from source; Intel and macOS 14 hardware testing remain outstanding. No account, internet connection, microphone access or paid API is required to play.</p></details>
-        <details><summary>Why might macOS show a security warning?</summary><p>This is a locally ad-hoc-signed engineering preview, not a Developer ID-signed or notarized release. A downloaded copy may be blocked by Gatekeeper. Review the source and release details first; use Apple’s normal approval flow only if you trust the download. Do not disable system security globally.</p></details>
-        <details><summary>How do I start playing?</summary><p>Unzip and open SurBox, then click the instrument. Use <kbd>A W S E D F T G Y H U J K O L P ; '</kbd> for chromatic notes, hold Space to pump, and press Escape to release all notes. Mouse dragging controls the bellows or glides across keys. Air assist is on by default.</p></details>
-        <details><summary>What has been tested?</summary><p>The current build passed 16 deterministic groups and 53 primary native checks, including audio output, keyboard interaction and lid-input integration with injected data. Human listening, physical sensor behavior, VoiceOver, device hot-plug and wider hardware acceptance remain open.</p><p><a href="verification.txt">Read the verification report</a></p></details>
-      </div>
-    </section>
-    <section class="wrap closing"><p>No accounts. No cloud audio. Just your Mac.</p><a href="release-notes.txt">Release notes <span aria-hidden="true">↗</span></a> · <a href="downloads/SHA256SUMS.txt">Download checksums</a></section>
+    <section class="wrap compatibility" id="compatibility"><div><p class="eyebrow">Before you download</p><h2>A real instrument.<br>Honest requirements.</h2></div><div class="requirements">
+      <details open><summary>Will moving my MacBook screen play the bellows?</summary><p>Only on macOS if your Mac exposes a compatible continuous lid-angle sensor. SurBox checks the hardware and shows the actual status. The <strong>2020 M1 MacBook Air does not expose that sensor</strong>; its open/closed switch cannot measure flapping. Windows and Android do not implement physical lid tracking.</p><p>macOS lid integration has been tested with injected readings. Actual hand-moved tracking on a compatible Mac remains unverified. Move any supported screen gently; never force the hinge. Normal lid-close sleep stays enabled.</p></details>
+      <details><summary>Which systems can run the app?</summary><p>Choose Apple Silicon macOS 14+, Windows 10/11 x64, or Android 8.0+. Android is a signed universal APK with no native-ABI dependency. Windows is a portable ZIP: keep its samples folder beside SurBox.exe. macOS Intel, iOS, Linux and Windows ARM-native builds are not supplied. No account, internet connection, microphone access or paid API is required to play.</p></details>
+      <details><summary>Why might macOS show a security warning?</summary><p>This is a locally ad-hoc-signed engineering preview, not a Developer ID-signed or notarized release. A downloaded copy may be blocked by Gatekeeper. Review the source and release details first; use Apple’s normal approval flow only if you trust the download. Do not disable system security globally.</p></details>
+      <details><summary>How do I install on Windows or Android?</summary><p>On Windows, download and extract the entire ZIP, then open SurBox.exe. It is not Authenticode-signed, so SmartScreen may warn. On Android, download the APK and use the system installer. Android may request permission for your browser to install apps from this source. Approve only if you trust this download, then turn that permission off again. There is no Play Store listing and no iOS APK support. Never disable device security globally.</p></details>
+      <details><summary>How do I start playing?</summary><p>On desktop, unzip and open SurBox, then click the instrument. Use <kbd>A W S E D F T G Y H U J K O L P ; '</kbd> for chromatic notes, hold Space to pump, and press Escape to release all notes. On Android, install the APK, rotate to landscape, and touch keys with multiple fingers while another finger drags the bellows. Air assist is on by default.</p></details>
+      <details><summary>What has been tested?</summary><p>The macOS build passed 16 deterministic groups and 53 primary native checks. Windows was built with MSVC on a Windows runner and passed 13 native UI checks plus sample/DSP tests. Android passed 19 emulator instrument checks, including multitouch, AudioTrack progress and no Internet permission. Human listening, physical-device latency, device hot-plug and assistive-technology acceptance remain open.</p><p><a href="platform-testing.txt">Cross-platform verification report</a> · <a href="verification.txt">macOS report</a></p></details>
+    </div></section>
+    <section class="wrap closing"><p>No accounts. No cloud audio. Just your instrument.</p><a href="release-notes.txt">Release notes <span aria-hidden="true">↗</span></a> · <a href="downloads/SHA256SUMS.txt">Download checksums</a></section>
   </main>
   <footer class="wrap"><span class="wordmark">SURBOX</span><p>Acoustic recording by <a href="https://freesound.org/people/donyaquick/sounds/330410/">Donya Quick</a>, CC0. Derived from the HQ MP3 preview, not the original lossless WAV.</p><a href="lid-tracking.txt">Lid sensor details</a></footer>
 </body>

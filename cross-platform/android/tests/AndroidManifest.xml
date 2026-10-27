@@ -1,0 +1,1 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="ai.surbox.tests"><uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35"/><application android:label="SurBox test harness"/><instrumentation android:name="ai.surbox.SurBoxInstrumentation" android:targetPackage="ai.surbox" android:functionalTest="true"/></manifest>

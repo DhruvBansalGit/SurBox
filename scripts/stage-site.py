@@ -15,20 +15,21 @@ app_zip = root / 'artifacts/SurBox-macOS-arm64.zip'
 subprocess.run(['ditto', '-c', '-k', '--sequesterRsrc', '--keepParent', str(app), str(app_zip)], check=True)
 
 # Documentation is served as inert text; the source archive retains Markdown.
-for source, target in [('TESTING.md', 'verification.txt'), ('LID_TRACKING.md', 'lid-tracking.txt')]:
+for source, target in [('TESTING.md', 'verification.txt'), ('LID_TRACKING.md', 'lid-tracking.txt'), ('PLATFORM_TESTING.md', 'platform-testing.txt')]:
     shutil.copy2(root / source, site / target)
 
-files = [root / name for name in ['Package.swift', 'README.md', 'TESTING.md', 'LID_TRACKING.md', '.gitignore', '.gitattributes']]
+files = [root / name for name in ['Package.swift', 'README.md', 'TESTING.md', 'LID_TRACKING.md', 'PLATFORM_TESTING.md', '.gitignore', '.gitattributes']]
 if (root / 'PUBLISHING.md').exists(): files.append(root / 'PUBLISHING.md')
-for folder in ['Sources', 'Tests', 'scripts', 'Resources', 'AudioSource', 'SurBox.xcodeproj', 'site']:
+for folder in ['Sources', 'Tests', 'scripts', 'Resources', 'AudioSource', 'SurBox.xcodeproj', 'site', 'cross-platform', '.github']:
     for path in (root / folder).rglob('*'):
         if not path.is_file(): continue
-        if any(part in ['.vercel', 'downloads', 'node_modules', 'AppIcon.iconset', '.DS_Store', 'xcuserdata', '__pycache__'] for part in path.parts): continue
+        if any(part in ['.vercel', 'downloads', 'node_modules', 'AppIcon.iconset', '.DS_Store', 'xcuserdata', '__pycache__', 'build'] for part in path.parts): continue
+        if path.suffix.lower() in ['.p12', '.jks', '.keystore', '.password', '.apk', '.exe', '.class']: continue
         if path.name in ['source-page.html', 'source-decoded.wav'] or path.name.startswith('.env'): continue
         files.append(path)
 # Include compact evidence and the main interface images, not machine build logs.
 for path in (root / 'artifacts/testing').rglob('*'):
-    if path.is_file() and (path.name in ['native-results.txt', 'core-results.txt'] or (path.parent.name == 'native' and path.suffix == '.png')):
+    if path.is_file() and (path.name in ['native-results.txt', 'core-results.txt', 'android-results.txt', 'java-results.txt', 'cpp-results.txt', 'logic-results.txt', 'windows-ui-test.txt', 'windows-self-test.txt', 'runner.json'] or (path.parent.name in ['native', 'android', 'windows'] and path.suffix == '.png')):
         files.append(path)
 source_zip = root / 'artifacts/SurBox-source.zip'
 with zipfile.ZipFile(source_zip, 'w', zipfile.ZIP_DEFLATED) as archive:
@@ -37,8 +38,15 @@ with zipfile.ZipFile(source_zip, 'w', zipfile.ZIP_DEFLATED) as archive:
 with zipfile.ZipFile(source_zip) as archive:
     assert archive.testzip() is None
     assert not any('/.vercel/' in name or name.endswith('source-page.html') for name in archive.namelist())
-for archive in [app_zip, source_zip]: shutil.copy2(archive, downloads / archive.name)
-checksums = ''.join(f'{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.name}\n' for path in sorted(downloads.glob('*.zip')))
+android_apk = root / 'artifacts/android/SurBox-Android.apk'
+windows_zip = root / 'artifacts/windows/SurBox-Windows-x64.zip'
+assert android_apk.exists() and windows_zip.exists(), 'Build and verify both new platform artifacts before publishing their download links'
+with zipfile.ZipFile(windows_zip) as archive: assert archive.testzip() is None
+with zipfile.ZipFile(android_apk) as archive:
+    assert archive.testzip() is None
+    assert 'classes.dex' in archive.namelist()
+for archive in [app_zip, source_zip, android_apk, windows_zip]: shutil.copy2(archive, downloads / archive.name)
+checksums = ''.join(f'{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.name}\n' for path in sorted(downloads.iterdir()) if path.suffix in ['.zip', '.apk'])
 (downloads / 'SHA256SUMS.txt').write_text(checksums)
 print(checksums, end='')
 print('Prepared static site and verified source archive. No credentials or developer paths are required by the app.')

@@ -1,0 +1,15 @@
+PASS Native window paints 37 key polygons
+PASS Native key messages produce C/E/G chord
+PASS Auto-repeat does not duplicate notes
+PASS Native key releases clear chord
+PASS Native panel hit testing starts drag
+PASS Native mouse movement opens hinge
+PASS Hinge movement charges reserve
+PASS Native volume slider wiring
+PASS Native tonic selector wiring
+PASS Native drone control
+PASS Escape releases drones and keys
+PASS Deactivation releases held keys
+PASS Native Windows screenshot captured
+RESULT 13 native Windows UI checks; failures=0
+Hardware speaker output, device changes and physical input remain unverified.

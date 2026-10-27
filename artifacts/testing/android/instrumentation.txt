@@ -1,0 +1,22 @@
+PASS Actual APK decodes all 39 bundled recordings
+PASS Native AudioTrack accepts continuously rendered PCM frames
+PASS Native activity is foreground
+PASS Audio focus granted on Android emulator
+PASS Native Android keyboard events produce chord
+PASS Chord key-up releases all notes
+PASS Actual touch drag opens bellows around fixed pivot
+PASS Touch pumping supplies actual air reserve
+PASS Reverse touch closes to constrained stop
+PASS Native key touch creates note
+PASS Touch cancel clears held note
+PASS Two-finger touch chord has independent ownership
+PASS Space assisted pump moves bellows
+PASS Window focus loss clears notes
+PASS Relative Sa and fifth drones
+PASS Actual Android screen capture
+PASS Production Android mixer emits bounded nonzero PCM
+PASS Android mixer release reaches silence
+PASS APK has no Internet permission
+RESULT 19 Android checks, failures=0
+Physical-device latency, speaker listening, accessibility and battery acceptance remain unverified.
+
