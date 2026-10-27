@@ -13,7 +13,8 @@ SurBox now includes a real MacBook lid-angle input: on compatible hardware, gent
 - **Website:** [surbox.vercel.app](https://surbox.vercel.app) — a download/information page, not a browser instrument.
 - **Ready-to-run Apple Silicon app:** [Download ZIP](https://surbox.vercel.app/downloads/SurBox-macOS-arm64.zip)
 - **Portable source archive:** [Download source](https://surbox.vercel.app/downloads/SurBox-source.zip)
-- **Publishing status:** [PUBLISHING.md](PUBLISHING.md) — Vercel is live; the requested GitHub upload awaits repository write access.
+- **GitHub:** [DhruvBansalGit/SurBox](https://github.com/DhruvBansalGit/SurBox) — source published on `main`.
+- **Publishing status:** [PUBLISHING.md](PUBLISHING.md) — GitHub and Vercel are live; Vercel deployments currently use the CLI, not automatic Git pushes.
 - **Source:** [Swift package](Package.swift) or [Xcode project](SurBox.xcodeproj)
 - **Finished interface:** [Playing](artifacts/testing/native/03-playing.png), [Folded](artifacts/testing/native/01-folded.png), [Compact window](artifacts/testing/native/04-compact.png)
 - **Evidence and remaining acceptance gates:** [TESTING.md](TESTING.md)

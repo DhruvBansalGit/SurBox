@@ -14,15 +14,15 @@ The owner explicitly confirmed that SurBox is personal and non-commercial, allow
 
 The static page has no JavaScript, analytics, external fonts, forms, microphone/camera access or server functions. Runtime dependencies: none. Security headers include a restrictive Content Security Policy. GitHub is not required to download either ZIP.
 
-## GitHub: prepared locally, upload blocked by permissions
+## GitHub: live
 
-Requested repository: https://github.com/DhruvBansalGit/SurBox
+Published repository: https://github.com/DhruvBansalGit/SurBox (branch `main`).
 
-The repository was public and empty when inspected. The available GitHub credential authenticates as **Alexwatson-de** and has **no push permission** on this repository. No pending invitation for that repository was available. No GitHub release or successful source push is claimed.
+The source, Swift package, Xcode project, licensed samples, compact test evidence and static website have been uploaded. The first source commit was `4fed6c7`; GitHub's remote ref was verified against the local commit after the push. Generated app/source ZIPs remain outside Git history and are available from the Vercel download page.
 
-To unblock the upload, the repository owner can invite **Alexwatson-de** under Settings > Collaborators, or authenticate locally with the owner account. Do not paste a token in chat or put it in a file, remote URL, Vercel variable, command argument or Git history. The staged source is isolated in the SurBox folder, and the remote is the exact owner-supplied repository. No force-push or changes to another repository are needed.
+The initial unrelated Git session lacked write access. The owner subsequently authorized a temporary credential, which was verified as **DhruvBansalGit** with push permission before use. It was supplied to Git through anonymous pipes and a transient credential helper, not saved in project files, Git configuration/history, environment files, Vercel settings or remote URLs. No force push or changes to another repository were performed.
 
-After access is granted, accept any target-repository invitation and run a normal authenticated `git push -u origin main` from the SurBox folder. On this host the approved credential is held by the macOS keychain; use a credential helper rather than embedding it in the URL. If the remote gains commits meanwhile, fetch and reconcile them first; do not overwrite them.
+Future pushes require a valid authorized session: use an OS credential helper or GitHub CLI authentication, never a token embedded in a URL or source. Fetch and reconcile remote changes before pushing; do not overwrite them. Credentials supplied temporarily for this upload were not installed as a persistent owner login.
 
 Automatic GitHub-to-Vercel deployment is not connected. The current site was deployed with Vercel CLI using the existing authorized session. Connecting Git integration later requires Vercel GitHub App access and a Git repository root setting compatible with the `site` folder.
 
