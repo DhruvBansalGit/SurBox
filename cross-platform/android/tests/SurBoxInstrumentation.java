@@ -33,6 +33,31 @@ public final class SurBoxInstrumentation extends Instrumentation {
             check(activity.state.notes().size()==3,"Native Android keyboard events produce chord");
             key(KeyEvent.ACTION_UP,KeyEvent.KEYCODE_A);key(KeyEvent.ACTION_UP,KeyEvent.KEYCODE_D);key(KeyEvent.ACTION_UP,KeyEvent.KEYCODE_G);
             check(activity.state.notes().isEmpty(),"Chord key-up releases all notes");
+            TouchKeyboardLayout layout=activity.instrument.testKeyboardLayout();float density=activity.getResources().getDisplayMetrics().density;
+            check(layout.keys.length==13,"Touch-first layout shows 13 large keys, not 37 thin keys");
+            check(layout.whiteWidth/density>=72&&layout.blackWidth/density>=48,"Actual natural keys at least 72dp wide and black keys at least 48dp");
+            check((layout.bottom-layout.top)/density>=140&&(layout.bottom-layout.blackBottom)/density>=60,"Actual keys are tall with a separate exposed natural-note area");
+            lines.add("INFO key sizes dp: natural width="+(layout.whiteWidth/density)+", height="+((layout.bottom-layout.top)/density)+", black width="+(layout.blackWidth/density)+", height="+((layout.blackBottom-layout.top)/density));
+            boolean allKeyPoints=true;
+            for(TouchKeyboardLayout.Key k:layout.keys){
+                float top=k.black?k.top:layout.blackBottom;
+                for(int ix=1;ix<=3;ix++)for(int iy=1;iy<=3;iy++){
+                    float tx=k.left+k.width()*ix/4,ty=top+(k.bottom-top)*iy/4;
+                    touch(MotionEvent.ACTION_DOWN,tx,ty);
+                    if(activity.state.notes().size()!=1||!activity.state.notes().contains(48+k.offset))allKeyPoints=false;
+                    touch(MotionEvent.ACTION_UP,tx,ty);
+                }
+            }
+            check(allKeyPoints,"117 distributed real touch positions select the intended natural/black pitch");
+            float glideY=layout.bottom-20*density;touch(MotionEvent.ACTION_DOWN,layout.keys[0].left+layout.whiteWidth/2,glideY);
+            boolean glides=true;for(TouchKeyboardLayout.Key k:layout.keys)if(!k.black){touch(MotionEvent.ACTION_MOVE,(k.left+k.right)/2,glideY);if(!activity.state.notes().contains(48+k.offset)||activity.state.notes().size()!=1)glides=false;}
+            touch(MotionEvent.ACTION_UP,layout.right-10*density,glideY);check(glides&&activity.state.notes().isEmpty(),"Large-key glissando changes pitch accurately and releases cleanly");
+            touch(MotionEvent.ACTION_DOWN,layout.keys[0].right-5*density,glideY);touch(MotionEvent.ACTION_MOVE,layout.keys[0].right+2*density,glideY);
+            check(activity.state.notes().contains(48),"Small finger boundary jitter does not trigger the next natural");
+            touch(MotionEvent.ACTION_MOVE,layout.keys[0].right+6*density,glideY);check(activity.state.notes().contains(50),"Deliberate slide past the boundary selects the adjacent natural");touch(MotionEvent.ACTION_UP,layout.keys[0].right+6*density,glideY);
+            touch(MotionEvent.ACTION_DOWN,layout.keys[0].left+layout.whiteWidth/2,glideY);key(KeyEvent.ACTION_DOWN,KeyEvent.KEYCODE_DPAD_RIGHT);key(KeyEvent.ACTION_UP,KeyEvent.KEYCODE_DPAD_RIGHT);
+            touch(MotionEvent.ACTION_MOVE,layout.keys[0].left+layout.whiteWidth/2,glideY);check(activity.state.notes().isEmpty()&&activity.state.first()==60,"Octave shift cancels old touches instead of retriggering the held finger");touch(MotionEvent.ACTION_UP,layout.keys[0].left+layout.whiteWidth/2,glideY);
+            runOnMainSync(()->{activity.shiftOctave(99);});check(activity.state.first()+12==108,"Highest previous C8 remains reachable with wide keys");runOnMainSync(()->{activity.shiftOctave(-99);});check(activity.state.first()==36,"Lowest previous C2 remains reachable with wide keys");runOnMainSync(()->{activity.state.reset();activity.shiftOctave(0);});
             final float[][] panel={null},key={null};runOnMainSync(()->{panel[0]=activity.instrument.testPanelPoint();key[0]=activity.instrument.testKeyPoint(0);});
             float x=panel[0][0],y=panel[0][1];double before=activity.state.angle;
             touch(MotionEvent.ACTION_DOWN,x,y);for(int i=1;i<=20;i++){touch(MotionEvent.ACTION_MOVE,x,y-i*5);SystemClock.sleep(15);}touch(MotionEvent.ACTION_UP,x,y-100);
@@ -55,14 +80,15 @@ public final class SurBoxInstrumentation extends Instrumentation {
             key(KeyEvent.ACTION_DOWN,KeyEvent.KEYCODE_SPACE);SystemClock.sleep(650);key(KeyEvent.ACTION_UP,KeyEvent.KEYCODE_SPACE);check(activity.state.angle>.2,"Space assisted pump moves bellows");
             key(KeyEvent.ACTION_DOWN,KeyEvent.KEYCODE_A);runOnMainSync(()->activity.instrument.onWindowFocusChanged(false));check(activity.state.notes().isEmpty(),"Window focus loss clears notes");
             runOnMainSync(()->{activity.state.tonic=2;activity.state.droneSa=true;activity.state.dronePa=true;activity.state.drones();activity.syncNotes();});check(activity.state.notes().contains(50)&&activity.state.notes().contains(57),"Relative Sa and fifth drones");
-            runOnMainSync(()->{activity.panic();activity.state.angle(.62);activity.state.note("test-a",48);activity.state.note("test-b",52);activity.state.note("test-c",55);activity.syncNotes();});SystemClock.sleep(150);
+            runOnMainSync(()->{activity.panic();activity.state.tonic=0;activity.state.angle(.62);activity.state.note("test-a",48);activity.state.note("test-b",52);activity.state.note("test-c",55);activity.syncNotes();});SystemClock.sleep(150);
             File directory=new File(activity.getExternalFilesDir(null),"verification");directory.mkdirs();
             Bitmap screenshot=getUiAutomation().takeScreenshot();try(FileOutputStream out=new FileOutputStream(new File(directory,"android-playing.png"))){screenshot.compress(Bitmap.CompressFormat.PNG,100,out);}check(screenshot.getWidth()>0,"Actual Android screen capture");
             runOnMainSync(()->activity.panic());
             // Separate loaded production mixer output check without racing the live mixer.
             ReedMixer mixer=new ReedMixer();float[] sample=new float[96000];for(int i=0;i<sample.length;i++)sample[i]=(float)(.4*Math.sin(i*2*Math.PI*261.625/44100));mixer.load(60,sample,20000,90000);mixer.muted=false;mixer.pressure=.8f;mixer.note(60,true);float[] out=new float[48000];mixer.render(out,out.length);float peak=0;for(float v:out)peak=Math.max(peak,Math.abs(v));check(peak>.01&&peak<1,"Production Android mixer emits bounded nonzero PCM");mixer.panic();mixer.render(out,out.length);check(Math.abs(out[out.length-1])<.00001,"Android mixer release reaches silence");
             check(activity.getPackageManager().checkPermission("android.permission.INTERNET","ai.surbox")==android.content.pm.PackageManager.PERMISSION_DENIED,"APK has no Internet permission");
-            lines.add("RESULT "+lines.size()+" Android checks, failures="+failed);lines.add("Physical-device latency, speaker listening, accessibility and battery acceptance remain unverified.");
+            int assertions=0;for(String line:lines)if(line.startsWith("PASS ")||line.startsWith("FAIL "))assertions++;
+            lines.add("RESULT "+assertions+" Android checks, failures="+failed);lines.add("Physical-device touch comfort, latency, speaker listening, accessibility and battery acceptance remain unverified.");
             try(FileOutputStream f=new FileOutputStream(new File(directory,"android-results.txt"))){f.write(String.join("\n",lines).getBytes(java.nio.charset.StandardCharsets.UTF_8));}
         }catch(Throwable e){failed++;lines.add("FAIL "+e.toString());}
         Bundle result=new Bundle();result.putString("stream",String.join("\n",lines)+"\n");finish(failed==0?-1:0,result);

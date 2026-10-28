@@ -4,7 +4,7 @@
 
 Choose your platform at **[surbox.vercel.app/#downloads](https://surbox.vercel.app/#downloads)**. Native Android (Java/Canvas/AudioTrack) and Windows (Win32/C++/native PCM) previews now accompany the original macOS app; these are not web wrappers. All include the acoustic recordings and offline bellows/key playback.
 
-- [Android 8+ universal APK](https://surbox.vercel.app/downloads/SurBox-Android.apk) — signed direct-install package, landscape multitouch; Android 15 emulator tested, not Play Store distributed.
+- [Android 8+ universal APK](https://surbox.vercel.app/downloads/SurBox-Android.apk) — **1.0.1: large, tall 13-key layout**, with octave switching for C2-C8. Signed update over 1.0.0; 29 native checks on normal/compact Android emulator layouts and 34 Java checks pass. Not Play Store distributed.
 - [Windows 10/11 x64 ZIP](https://surbox.vercel.app/downloads/SurBox-Windows-x64.zip) — extract all files and run SurBox.exe; built and tested on a Windows runner, unsigned and still a hardware-validation preview.
 - [Apple Silicon macOS ZIP](https://surbox.vercel.app/downloads/SurBox-macOS-arm64.zip) — original app retained.
 - [Platform build/setup](cross-platform/README.md) and [platform test report](PLATFORM_TESTING.md).

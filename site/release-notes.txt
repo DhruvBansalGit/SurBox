@@ -1,5 +1,14 @@
-SurBox 1.0.0 — macOS, Windows and Android engineering previews
-Updated 2026-10-27
+SurBox engineering previews — Android 1.0.1 / macOS and Windows 1.0.0
+
+ANDROID 1.0.1 — LARGER PLAYABLE KEYS
+Responds to feedback that the original perspective keys were too small/thin.
+Now shows 13 tall, wide keys, with no perspective compression on touch faces.
+The bellows moves in a separate compact upper band; one toolbar frees height.
+Octave controls preserve the previous C2-C8 reach. Natural/black hit regions
+match the visible keys and stay fixed during pressed animations. Minor finger
+jitter near natural-note boundaries no longer changes pitch accidentally.
+Signed with the same release key; install over 1.0.0. VersionCode is now 2.
+The macOS and Windows packages are unchanged by this Android-specific fix.
 
 CHOOSE YOUR SYSTEM
 macOS 14+ Apple Silicon: /downloads/SurBox-macOS-arm64.zip
@@ -19,8 +28,11 @@ New native ports, not browser wrappers:
 - Existing native macOS app is retained.
 
 VERIFIED
-Android: signed APK installed on Android 15 arm64 emulator; 19 native checks
-and 16 host Java checks pass, including multitouch and actual AudioTrack progress.
+Android: 29 native checks pass at both normal and compact landscape emulator
+sizes; 34 Java checks pass. Actual key widths: 111.3dp natural / 69.0dp black
+at normal size, 77dp natural / 48dp black at compact size. 117 distributed
+native touch positions per run select their intended pitches. In-place APK
+upgrade and signature verification pass. Physical finger comfort is unverified.
 Windows: MSVC build on actual Windows runner; 13 native UI checks, sample/DSP
 process check and 13 C++ core assertions pass. Public ZIP is that runner build.
 macOS: previous 16 deterministic groups and 53 primary native checks remain.

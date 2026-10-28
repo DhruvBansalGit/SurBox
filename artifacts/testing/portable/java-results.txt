@@ -14,4 +14,22 @@ PASS DSP begins silent
 PASS Fallback polyphony bounded
 PASS Release reaches silence
 PASS Sample transposition and repeated loops
-RESULT 16 deterministic Java checks passed
+PASS Finger-sized natural and black widths at 600 dp
+PASS Tall key faces and exposed natural area at 600 dp
+PASS 325 finger positions select intended pitches at 600 dp
+PASS Outside keys never trigger notes at 600 dp
+PASS Finger-sized natural and black widths at 800 dp
+PASS Tall key faces and exposed natural area at 800 dp
+PASS 325 finger positions select intended pitches at 800 dp
+PASS Outside keys never trigger notes at 800 dp
+PASS Finger-sized natural and black widths at 1000 dp
+PASS Tall key faces and exposed natural area at 1000 dp
+PASS 325 finger positions select intended pitches at 1000 dp
+PASS Outside keys never trigger notes at 1000 dp
+PASS Small finger jitter retains adjacent natural
+PASS Deliberate slide reaches next natural
+PASS Below black key selects exposed natural, not sharp
+PASS Deliberate black-key transition is immediate
+PASS Octave controls retain access to highest previous C8
+PASS Octave controls retain lowest C2
+RESULT 34 deterministic Java checks passed

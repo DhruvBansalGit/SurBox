@@ -29,7 +29,7 @@ public final class Instrument {
         if(droneSa)owners.put("drone-sa",first()+tonic);
         if(dronePa)owners.put("drone-pa",first()+tonic+7);
     }
-    public synchronized void octave(int delta){clear();octave=Math.max(2,Math.min(5,octave+delta));}
+    public synchronized void octave(int delta){clear();octave=Math.max(2,Math.min(7,octave+delta));}
     public synchronized void step(double dt){
         if(!Double.isFinite(dt)||dt<=0)return;dt=Math.min(.1,dt);
         double speed=Math.min(Math.abs(angle-previousAngle)/dt,5);previousAngle=angle;

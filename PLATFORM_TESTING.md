@@ -4,6 +4,22 @@
 
 ## Android native app
 
+### Android 1.0.1: large-key correction
+
+User feedback identified the original perspective keyboard as too small and thin for accurate finger placement. Android now shows **13 notes / eight wide natural keys**, in a nearly full-width, unforeshortened keyboard occupying most of the instrument height. The live hinged bellows sits in a separate compact upper band. One compact toolbar replaces the previous two rows. Octave controls retain the full previous C2-C8 reach; the visible range label now correctly reports one octave.
+
+Pressed keys move visually but their touch regions never move. Black keys take priority only within their visible upper area; the exposed lower cream area always selects naturals. A 3 dp natural-to-natural boundary tolerance reduces accidental note changes from minor finger jitter without delaying intentional sharp/flat transitions. Multitouch, glissando and independent bellows input are retained; octave changes cancel the previous touch owners rather than retriggering them at a new pitch.
+
+**Current tests:** 34 deterministic Java assertions, including 975 distributed key positions over three layout widths, pass. The expanded **29-check Android instrumentation suite passes on both the original emulator display and a 640 x 360 dp landscape display**. Each run includes 117 real touch-event positions, lower natural vs upper black selection, glissando, jitter handling, chords, octave safety and the original audio/airflow checks.
+
+- Original landscape: natural keys **111.3 x 180.4 dp**; black keys **69.0 x 99.2 dp**.
+- Compact landscape: natural keys **77.0 x 146.0 dp**; black keys **48.0 x 80.3 dp**. These are measured UI density-independent pixels, not physical millimeters or a universal guarantee for every phone.
+- [Current normal-layout results](artifacts/testing/android/android-results.txt), [compact-layout results](artifacts/testing/android/compact-results.txt), [large-key screenshot](artifacts/testing/android/android-playing.png), [compact screenshot](artifacts/testing/android/android-compact.png).
+- APK version **1.0.1 / versionCode 2** uses the original signing certificate. In-place installation over the previous 1.0.0 APK passed on the emulator; users should install the update over their existing app, not uninstall first.
+- No audio engine, recording assets, Windows application or macOS application changes were made for this correction. APK signature verification passes. Physical finger-comfort and hardware listening checks remain unverified; this is a geometry and input-testing improvement, not a claim of human acceptance.
+
+### Original Android 1.0.0 milestone (historical counts below)
+
 - Java + Canvas + AudioTrack; no browser wrapper, cloud audio, account or runtime download.
 - Built using the installed Android 35 SDK, build-tools 35.0.1 and JDK 11. Release APK verified with APK Signature Schemes v2/v3, RSA 3072. Declared minimum Android 8.0/API 26, target API 35. No native-ABI library dependency.
 - Dedicated private release signing material is kept outside the workspace/repository/archives. Public signing fingerprint and update-key guidance are in [cross-platform setup](cross-platform/README.md).
@@ -25,7 +41,7 @@
 
 A rerun initially checked AudioTrack too soon: the last sample finished loading before output initialization. That test failed honestly; it was corrected to wait for the actual output-started state, and the complete final suite passed. No exception was hidden or accepted as success. Emulator ADB authorization initially blocked automated installation; the test instance's displayed authorization prompt was accepted, then installation and instrumentation succeeded.
 
-The landscape UI was visually inspected and widened for usable touch-key spacing; an overlapping instruction line was removed. Source supports reduced visible range in forced portrait/multiwindow, but the normal phone activity requests sensor-landscape. Physical-device touch ergonomics remain unverified.
+The original landscape UI was visually inspected, but subsequent user feedback showed that its keys were still too thin. The 1.0.1 correction above supersedes that layout. Android requests sensor-landscape; unusual forced portrait/multiwindow sizes are not covered by the stated touch-size guarantees. Physical-device touch ergonomics remain unverified.
 
 **Limitations:** The emulator was run without host speaker playback, so AudioTrack progress is not human listening evidence. No physical Android phone/tablet, Bluetooth/wired route switching, Android 8-14 runtime, foldable hinge, thermal/battery endurance or full TalkBack audit was verified. Standard controls are labeled, but individually navigable virtual-key accessibility is not at macOS parity. Physical screen-angle control is not implemented.
 

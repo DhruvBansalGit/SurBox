@@ -4,6 +4,17 @@ PASS Native activity is foreground
 PASS Audio focus granted on Android emulator
 PASS Native Android keyboard events produce chord
 PASS Chord key-up releases all notes
+PASS Touch-first layout shows 13 large keys, not 37 thin keys
+PASS Actual natural keys at least 72dp wide and black keys at least 48dp
+PASS Actual keys are tall with a separate exposed natural-note area
+INFO key sizes dp: natural width=111.28571, height=180.44952, black width=68.99715, height=99.24723
+PASS 117 distributed real touch positions select the intended natural/black pitch
+PASS Large-key glissando changes pitch accurately and releases cleanly
+PASS Small finger boundary jitter does not trigger the next natural
+PASS Deliberate slide past the boundary selects the adjacent natural
+PASS Octave shift cancels old touches instead of retriggering the held finger
+PASS Highest previous C8 remains reachable with wide keys
+PASS Lowest previous C2 remains reachable with wide keys
 PASS Actual touch drag opens bellows around fixed pivot
 PASS Touch pumping supplies actual air reserve
 PASS Reverse touch closes to constrained stop
@@ -17,6 +28,6 @@ PASS Actual Android screen capture
 PASS Production Android mixer emits bounded nonzero PCM
 PASS Android mixer release reaches silence
 PASS APK has no Internet permission
-RESULT 19 Android checks, failures=0
-Physical-device latency, speaker listening, accessibility and battery acceptance remain unverified.
+RESULT 29 Android checks, failures=0
+Physical-device touch comfort, latency, speaker listening, accessibility and battery acceptance remain unverified.
 

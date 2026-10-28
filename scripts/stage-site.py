@@ -29,7 +29,7 @@ for folder in ['Sources', 'Tests', 'scripts', 'Resources', 'AudioSource', 'SurBo
         files.append(path)
 # Include compact evidence and the main interface images, not machine build logs.
 for path in (root / 'artifacts/testing').rglob('*'):
-    if path.is_file() and (path.name in ['native-results.txt', 'core-results.txt', 'android-results.txt', 'java-results.txt', 'cpp-results.txt', 'logic-results.txt', 'windows-ui-test.txt', 'windows-self-test.txt', 'runner.json'] or (path.parent.name in ['native', 'android', 'windows'] and path.suffix == '.png')):
+    if path.is_file() and (path.name in ['native-results.txt', 'core-results.txt', 'android-results.txt', 'compact-results.txt', 'java-results.txt', 'cpp-results.txt', 'logic-results.txt', 'windows-ui-test.txt', 'windows-self-test.txt', 'runner.json'] or (path.parent.name in ['native', 'android', 'windows'] and path.suffix == '.png')):
         files.append(path)
 source_zip = root / 'artifacts/SurBox-source.zip'
 with zipfile.ZipFile(source_zip, 'w', zipfile.ZIP_DEFLATED) as archive:
